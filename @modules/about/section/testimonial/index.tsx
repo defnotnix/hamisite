@@ -22,6 +22,7 @@ import { Cards } from "@/@components/card";
 import { AnimateText } from "@/@animate/text";
 import { AnimateDiv } from "@/@animate/div";
 import { dataSupporters } from "@/@json/data/supporters";
+import { influencerTestimonials } from "@/@json/data/testimonial";
 
 export function SectionTestimonial() {
   // * DEFINITION
@@ -67,15 +68,11 @@ export function SectionTestimonial() {
             align="start"
             slideGap={"md"}
           >
-            <Carousel.Slide>
-              <Cards.Testimonial data={{}} />
-            </Carousel.Slide>
-            <Carousel.Slide>
-              <Cards.Testimonial data={{}} />
-            </Carousel.Slide>
-            <Carousel.Slide>
-              <Cards.Testimonial data={{}} />
-            </Carousel.Slide>
+            {influencerTestimonials.map((testimonial: any, index: number) => (
+              <Carousel.Slide key={index}>
+                <Cards.Testimonial data={testimonial} />
+              </Carousel.Slide>
+            ))}
           </Carousel>
         </AnimateDiv.Row>
 

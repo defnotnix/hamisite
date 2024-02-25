@@ -54,27 +54,6 @@ export function SectionAll() {
   // > CONTEXT
   const { state, dispatch } = useContext(ContextPageProp.Context);
 
-  // > CAROUSEL
-
-  const [active, setActive] = useState(0);
-
-  // > TABS
-
-  const [activeTab, setActiveTab] = useState("");
-  const tabs = [
-    {
-      label: "All",
-      value: "",
-    },
-    {
-      label: "Ongoing",
-      value: "ongoing",
-    },
-    {
-      label: "Completed",
-      value: "completed",
-    },
-  ];
   const filters = [
     {
       label: "STATUS",
@@ -144,7 +123,7 @@ export function SectionAll() {
       type: "PAGE_LOADED",
       value: "CAUSES",
     });
-  }, []);
+  }, [dispatch]);
 
   // * ANIMATE
 
@@ -221,7 +200,6 @@ export function SectionAll() {
                 }}
               />
             </Group>
-
             <AnimatePresence>
               <SimpleGrid cols={{ base: 1, lg: 2 }}>
                 {queryCause.data.map((causeinfo: any, index: number) => (

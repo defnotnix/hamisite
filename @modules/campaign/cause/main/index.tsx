@@ -45,16 +45,6 @@ export function ModuleCauses() {
 
   // * PRELOADING
 
-  const queryCause = useQuery({
-    queryKey: api.getFeatured.key,
-    queryFn: async () => {
-      const res = await api.getFeatured();
-
-      return res;
-    },
-    initialData: [],
-  });
-
   const queryCauseStat = useQuery({
     queryKey: api.getCauseStats.key,
     queryFn: async () => {

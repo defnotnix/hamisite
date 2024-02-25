@@ -67,7 +67,7 @@ export function SectionFeatured() {
       type: "PAGE_LOADED",
       value: "CAUSES",
     });
-  }, []);
+  }, [dispatch]);
 
   // * ANIMATE
 
@@ -76,8 +76,11 @@ export function SectionFeatured() {
   // * COMPONENTS
 
   const CauseHeader = () => {
-    const data: any = queryCause.data ? queryCause.data[active] : {};
-    console.log(queryCause.data);
+    const [data, setData] = useState<any>([]);
+
+    useEffect(() => {
+      setData(queryCause.data ? queryCause.data[active] : {});
+    }, []);
 
     return (
       <Container size="lg">
