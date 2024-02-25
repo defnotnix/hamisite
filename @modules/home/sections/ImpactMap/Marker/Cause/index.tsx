@@ -28,7 +28,9 @@ export function MapMarkerCause({
                 duratino: 2,
               });
             },
-            mouseover: () => {},
+            mouseover: () => {
+              setActive(data.key);
+            },
           }}
           center={[data.geo_lat, data.geo_long]}
           pathOptions={{

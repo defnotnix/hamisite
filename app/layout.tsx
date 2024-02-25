@@ -46,7 +46,11 @@ export default function Layout({ children }: { children: JSX.Element }) {
           href="https://fonts.googleapis.com/css2?family=Bayon&family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Yeseva+One&display=swap"
           rel="stylesheet"
         />
+        <title>
+          Hami Nepal | For the People, By the People
+        </title>
       </head>
+      
       <body
         style={{
           background: "#000",

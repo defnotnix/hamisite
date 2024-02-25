@@ -65,7 +65,7 @@ export function CardCauseHome({ data }: { data: any }) {
                 height="100%"
                 src={`${data.youtubeurl}&autoplay=1&mute=1&playsinline=1&loop=1`}
                 title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allow="?start=5,accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               ></iframe>
             </Paper>
           )}
@@ -93,7 +93,7 @@ export function CardCauseHome({ data }: { data: any }) {
             Router.push("/campaign/causes/" + data.id);
           } else {
             showNotification({
-              color:"blue",
+              color: "blue",
               icon: <Info />,
               title: "Work in progress",
               id: "1",

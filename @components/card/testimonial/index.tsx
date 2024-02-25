@@ -1,4 +1,4 @@
-import { Avatar, Group, Paper, Space, Text } from "@mantine/core";
+import { Avatar, Grid, Group, Paper, Space, Text } from "@mantine/core";
 import { Quotes } from "@phosphor-icons/react";
 
 export function CardTestimonial({ data }: { data: any }) {
@@ -23,8 +23,8 @@ export function CardTestimonial({ data }: { data: any }) {
 
         <Space h="xl" />
 
-        <Group justify="space-between">
-          <Group gap="xs">
+        <Grid>
+          <Grid.Col span={1}>
             <span
               style={{
                 color: "var(--mantine-color-brand-5)",
@@ -32,16 +32,23 @@ export function CardTestimonial({ data }: { data: any }) {
             >
               @
             </span>
-            <div>
-              <Text size="sm">{data.name}</Text>
-              <Text size="xs" opacity={0.5}>
-                Influencer
-              </Text>
-            </div>
-          </Group>
-
-          <Avatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjMTZTN48t3ivlGYM0cvvVhN7_9MvjDMdgFg&usqp=CAU" />
-        </Group>
+          </Grid.Col>
+          <Grid.Col span={7}>
+            <Group gap="xs">
+              <div>
+                <Text size="sm">{data.name}</Text>
+                <Text size="xs" opacity={0.5}>
+                  {data.title}
+                </Text>
+              </div>
+            </Group>
+          </Grid.Col>
+          <Grid.Col span={4}>
+            <Group justify="flex-end">
+              <Avatar src={data.image} />
+            </Group>
+          </Grid.Col>
+        </Grid>
       </Paper>
     </>
   );

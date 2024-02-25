@@ -315,6 +315,7 @@ export function LayoutSiteHeader() {
               })}
               tt="none"
               ta="center"
+              size="3rem"
             >
               {navitem.label}
             </Text>

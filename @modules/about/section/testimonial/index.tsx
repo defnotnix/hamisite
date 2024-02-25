@@ -21,6 +21,7 @@ import React, { useState } from "react";
 import { Cards } from "@/@components/card";
 import { AnimateText } from "@/@animate/text";
 import { AnimateDiv } from "@/@animate/div";
+import { dataSupporters } from "@/@json/data/supporters";
 
 export function SectionTestimonial() {
   // * DEFINITION
@@ -29,54 +30,6 @@ export function SectionTestimonial() {
   // * STATES
 
   const [active, setActive] = useState(0);
-
-  const supporters = [
-    {
-      img: "https://dogstudio.co/app/uploads/2019/02/new-york-times.png",
-    },
-    {
-      img: "https://dogstudio.co/app/uploads/2019/02/american-airlines.png",
-    },
-    {
-      img: "https://dogstudio.co/app/uploads/2019/02/microsoft.png",
-    },
-    {
-      img: "https://dogstudio.co/app/uploads/2019/02/msi.png",
-    },
-    {
-      img: "https://dogstudio.co/app/uploads/2019/02/alexander-mcqueen.png",
-    },
-    {
-      img: "https://dogstudio.co/app/uploads/2019/02/eastpack.png",
-    },
-    {
-      img: "https://dogstudio.co/app/uploads/2019/02/rappi.png",
-    },
-    {
-      img: "https://dogstudio.co/app/uploads/2019/02/quanta.png",
-    },
-    {
-      img: "https://dogstudio.co/app/uploads/2019/02/burger-king.png",
-    },
-    {
-      img: "https://dogstudio.co/app/uploads/2019/02/navy-pier.png",
-    },
-    {
-      img: "https://dogstudio.co/app/uploads/2019/02/jfk.png",
-    },
-    {
-      img: "https://dogstudio.co/app/uploads/2019/02/adobe.png",
-    },
-    {
-      img: "https://dogstudio.co/app/uploads/2019/02/crypt.png",
-    },
-    {
-      img: "https://dogstudio.co/app/uploads/2019/02/kikk.png",
-    },
-    {
-      img: "https://dogstudio.co/app/uploads/2019/02/verizon.png",
-    },
-  ];
 
   // * PRELOADING
 
@@ -134,15 +87,14 @@ export function SectionTestimonial() {
 
         <AnimateDiv.Container>
           <SimpleGrid cols={{ base: 4, lg: 6 }} spacing="xl">
-            {supporters.map((supdata: any, index: number) => (
+            {dataSupporters.map((supdata: any, index: number) => (
               <React.Fragment key={index}>
                 <AnimateDiv.Row>
                   <Image
-                    my="xl"
+                    my="xs"
                     style={{
-                      //filter: "invert(100%)",
-                      maxHeight: "3rem",
-                      maxWidth: "7rem",
+                      filter: supdata.invert ? "invert(100%)" : "",
+
                       objectFit: "contain",
                     }}
                     src={supdata.img}

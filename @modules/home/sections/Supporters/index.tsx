@@ -17,9 +17,11 @@ import {
 } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import { Play } from "@phosphor-icons/react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Cards } from "@/@components/card";
 import { influencerTestimonials } from "@/@json/data/testimonial";
+import { dataSupporters } from "@/@json/data/supporters";
+import { AnimateDiv } from "@/@animate/div";
 
 export function SectionHomeSupporters() {
   // * DEFINITION
@@ -119,18 +121,20 @@ export function SectionHomeSupporters() {
         </Title>
 
         <SimpleGrid cols={{ base: 4, lg: 6 }} spacing="xl">
-          {supporters.map((supdata: any, index: number) => (
-            <Image
-              my="xl"
-              style={{
-                //filter: "invert(100%)",
-                maxHeight: "3rem",
-                maxWidth: "7rem",
-                objectFit: "contain",
-              }}
-              src={supdata.img}
-              key={index}
-            />
+          {dataSupporters.map((supdata: any, index: number) => (
+            <React.Fragment key={index}>
+              <AnimateDiv.Row>
+                <Image
+                  my="xs"
+                  style={{
+                    filter: supdata.invert ? "invert(100%)" : "",
+
+                    objectFit: "contain",
+                  }}
+                  src={supdata.img}
+                />
+              </AnimateDiv.Row>
+            </React.Fragment>
           ))}
         </SimpleGrid>
       </Container>
