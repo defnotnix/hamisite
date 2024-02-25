@@ -1,0 +1,32 @@
+.root {
+  margin-top: 10rem;
+  //background: var(--mantine-color-dark-9);
+  padding: 5rem 0;
+
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 28rem;
+}
+
+.textoverlay {
+  opacity: 0.8;
+  width: 200rem;
+  position: absolute;
+  bottom: -15rem;
+  left: 10rem;
+  font-size: 24rem;
+  font-weight: 900;
+  color: var(--mantine-color-brand-5);
+}
+
+@media (max-width: em(800px)) {
+  .root {
+
+
+  }
+  .textoverlay {
+    left: var(--mantine-spacing-xl);
+    font-size: 10rem;
+    bottom:0;
+  }
+}

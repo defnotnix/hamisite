@@ -9,16 +9,49 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mantine/carousel": "^7.5.3",
+    "@mantine/charts": "^7.5.3",
+    "@mantine/code-highlight": "^7.5.3",
+    "@mantine/colors-generator": "^7.5.3",
+    "@mantine/core": "^7.5.3",
+    "@mantine/dates": "^7.5.3",
+    "@mantine/dropzone": "^7.5.3",
+    "@mantine/form": "^7.5.3",
+    "@mantine/hooks": "^7.5.3",
+    "@mantine/modals": "^7.5.3",
+    "@mantine/notifications": "^7.5.3",
+    "@mantine/nprogress": "^7.5.3",
+    "@mantine/spotlight": "^7.5.3",
+    "@mantine/tiptap": "^7.5.3",
+    "@phosphor-icons/react": "^2.0.15",
+    "@react-oauth/google": "^0.12.1",
+    "@tabler/icons-react": "^2.47.0",
+    "@tanstack/react-query": "^5.20.5",
+    "@tiptap/extension-link": "^2.2.3",
+    "@tiptap/react": "^2.2.3",
+    "@tiptap/starter-kit": "^2.2.3",
+    "axios": "^1.6.7",
+    "chroma-js": "^2.4.2",
+    "dayjs": "^1.11.10",
+    "embla-carousel-react": "^8.0.0-rc22",
+    "framer-motion": "^11.0.5",
+    "leaflet": "^1.9.4",
+    "moment": "^2.30.1",
+    "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "react-leaflet": "^4.2.1",
+    "recharts": "2"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8.4.35",
+    "postcss-preset-mantine": "^1.13.0",
+    "postcss-simple-vars": "^7.0.1",
+    "typescript": "^5"
   }
 }

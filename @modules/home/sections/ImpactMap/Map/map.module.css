@@ -1,0 +1,48 @@
+.root {
+  margin: 10rem 0;
+}
+
+.causeinfo {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+  z-index: 999;
+
+  .card {
+    background: var(--mantine-color-dark-9);
+  }
+}
+
+.eventinfo {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  z-index: 998;
+
+  .card {
+    background: var(--mantine-color-dark-9);
+  }
+}
+
+.mapreset {
+  position: absolute;
+  top: 4.8rem;
+  left: 12px;
+  z-index: 999;
+}
+
+.mapindex {
+  background: none;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  z-index: 999;
+}
+
+.maptitle {
+  width: 300px;
+  position: absolute;
+  top: 1rem;
+  left: calc(50% - 100px);
+  z-index: 999;
+}

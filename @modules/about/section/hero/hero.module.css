@@ -1,0 +1,57 @@
+.backdrop {
+  position: absolute;
+  left: 7.5px;
+  top: 0;
+  width: 100%;
+  padding-top: 100px;
+}
+
+.imageoverlay {
+  height: calc(100vh - 3rem);
+  position: relative;
+
+  .img {
+    height: 100%;
+    position: absolute;
+
+    z-index: -1;
+  }
+
+  .box {
+    background: #e4e2de;
+    top: 0;
+    height: calc(90vh - 3rem);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -2;
+    margin-top: 5rem;
+  }
+}
+
+.root {
+  height: 106vh;
+}
+
+.overlay {
+  height: 112vh;
+}
+
+@media (max-width: em(750px)) {
+  .backdrop {
+    padding-top: 50px;
+  }
+
+  .root {
+    height: 100vh;
+  }
+
+  .imageoverlay {
+    height: calc(100vh - 5rem);
+    position: relative;
+  }
+
+  .backdrop {
+    left: 0;
+  }
+}

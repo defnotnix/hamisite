@@ -1,0 +1,19 @@
+.root {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background: #010101;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--mantine-color-gray-6);
+  overflow: hidden;
+  z-index: 98;
+}
+
+.loader {
+  position: absolute;
+  bottom: 2rem;
+  right: 3rem;
+}

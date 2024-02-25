@@ -1,0 +1,22 @@
+.hero_overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.844) 0%,
+    rgba(0, 0, 0, 1) 100%
+  ) !important;
+  height: 100vh;
+
+  .header {
+    font-family: "Bayon", sans-serif;
+    text-transform: uppercase;
+
+    text-align: center;
+    color: var(--mantine-colors-gray-3);
+  }
+}
+
+@media (max-width: em(750px)) {
+  .hero_overlay {
+    height: auto;
+  }
+}

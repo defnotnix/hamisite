@@ -1,0 +1,7 @@
+.causecard {
+  position: relative;
+
+  .video {
+    position: absolute;
+  }
+}

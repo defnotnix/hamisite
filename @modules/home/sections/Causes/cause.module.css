@@ -1,0 +1,11 @@
+.seemore {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.seemore:hover {
+  opacity: 1;
+}

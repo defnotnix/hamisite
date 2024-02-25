@@ -1,0 +1,101 @@
+.root {
+  background: #111;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.backdrop {
+  position: relative;
+  z-index: --1;
+
+  img {
+    height: 110vh;
+    margin-top: -5vh;
+    width: 105vw;
+    object-fit: cover;
+    top: 0;
+  }
+
+  .img_face_front {
+    position: absolute;
+    z-index: 5;
+  }
+  .img_face_mid {
+    position: absolute;
+    z-index: 4;
+  }
+  .img_face_back {
+    position: absolute;
+    z-index: 2;
+    opacity: 0.3;
+  }
+
+  .img_overlay {
+    position: absolute;
+    display: block;
+    height: 100vh;
+    width: 100%;
+    z-index: 6;
+    background: radial-gradient(
+      60.73% 52.25% at 51.42% 41.99%,
+      rgba(0, 0, 0, 0.1) 28.65%,
+      rgba(0, 0, 0, 0.95) 95.9%
+    );
+    opacity: 1;
+  }
+
+  .img_shape_container {
+    margin-top: 20vh;
+    position: absolute;
+    top: 15rem;
+    z-index: 3;
+
+    width: 100%;
+
+    .img_shape {
+      position: absolute;
+      height: 30rem;
+      width: 30rem;
+      border-radius: 30rem;
+      border: 80px solid #d33636;
+    }
+
+    .img_outline {
+      position: absolute;
+      height: 32rem;
+      width: 32rem;
+      border-radius: 30rem;
+      border: 2px dashed #ffffff;
+      opacity: 0.6;
+    }
+  }
+}
+
+.forecontent {
+  width: 100vw;
+  overflow: hidden;
+
+  .container {
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    bottom: 4rem;
+
+    .cause_title {
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+      font-family: var(--font-heading);
+      text-align: center;
+    }
+  }
+}
+
+.textcontainer {
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  top: 4rem;
+}
