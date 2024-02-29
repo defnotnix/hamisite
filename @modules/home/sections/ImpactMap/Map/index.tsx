@@ -7,9 +7,11 @@ import {
   Badge,
   Box,
   Button,
+  Center,
   Container,
   Group,
   Image,
+  Overlay,
   Paper,
   Progress,
   SimpleGrid,
@@ -52,6 +54,8 @@ export default function ImpactMapContainer() {
   // * STATE
 
   const [zoom, setZoom] = useState(8);
+
+  const [enableMap, setEnableMap] = useState(false);
 
   const [scope, animate] = useAnimate();
   const [scopeEvent, animateEvent] = useAnimate();
@@ -341,11 +345,36 @@ export default function ImpactMapContainer() {
     <>
       <div className={classes.root}>
         <Container style={{ position: "relative" }}>
+          {!enableMap && (
+            <Paper
+              onClick={() => {
+                setEnableMap(true);
+              }}
+              h="100%"
+              w="100%"
+              style={{
+                position: "absolute",
+                top: 0,
+                zIndex: 99,
+                background: "rgba(0,0,0,.6)",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              hiddenFrom="lg"
+            >
+              <Center>
+                <Text size="xs">TAP TO INTERACT</Text>
+              </Center>
+            </Paper>
+          )}
+
           <Paper
             radius="lg"
             style={{
               overflow: "hidden",
             }}
+            h={{ base: 600, lg: "90vh" }}
           >
             <MapContainer
               //@ts-ignore
@@ -353,7 +382,8 @@ export default function ImpactMapContainer() {
               zoom={zoom}
               scrollWheelZoom={false}
               style={{
-                height: "90vh",
+                height: "100%",
+                zIndex: 10,
               }}
               markerZoomAnimation={true}
             >
@@ -419,7 +449,7 @@ export default function ImpactMapContainer() {
                     >
                       {pointerinfo.label}
                     </Badge>
-                    <ActionIcon
+                    {/* <ActionIcon
                       size="xs"
                       radius="xl"
                       variant="subtle"
@@ -437,7 +467,7 @@ export default function ImpactMapContainer() {
                       ) : (
                         <EyeClosed />
                       )}
-                    </ActionIcon>
+                    </ActionIcon> */}
                   </Group>
                 ))}
               </Stack>

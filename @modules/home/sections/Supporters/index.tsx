@@ -22,6 +22,7 @@ import { Cards } from "@/@components/card";
 import { influencerTestimonials } from "@/@json/data/testimonial";
 import { dataSupporters } from "@/@json/data/supporters";
 import { AnimateDiv } from "@/@animate/div";
+import Link from "next/link";
 
 export function SectionHomeSupporters() {
   // * DEFINITION
@@ -124,15 +125,17 @@ export function SectionHomeSupporters() {
           {dataSupporters.map((supdata: any, index: number) => (
             <React.Fragment key={index}>
               <AnimateDiv.Row>
-                <Image
-                  my="xs"
-                  style={{
-                    filter: supdata.invert ? "invert(100%)" : "",
+                <Link href={supdata.url}>
+                  <Image
+                    my="xs"
+                    style={{
+                      filter: supdata.invert ? "invert(100%)" : "",
 
-                    objectFit: "contain",
-                  }}
-                  src={supdata.img}
-                />
+                      objectFit: "contain",
+                    }}
+                    src={supdata.img}
+                  />
+                </Link>
               </AnimateDiv.Row>
             </React.Fragment>
           ))}

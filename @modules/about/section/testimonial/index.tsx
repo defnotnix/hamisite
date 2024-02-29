@@ -23,6 +23,7 @@ import { AnimateText } from "@/@animate/text";
 import { AnimateDiv } from "@/@animate/div";
 import { dataSupporters } from "@/@json/data/supporters";
 import { influencerTestimonials } from "@/@json/data/testimonial";
+import Link from "next/link";
 
 export function SectionTestimonial() {
   // * DEFINITION
@@ -87,15 +88,17 @@ export function SectionTestimonial() {
             {dataSupporters.map((supdata: any, index: number) => (
               <React.Fragment key={index}>
                 <AnimateDiv.Row>
-                  <Image
-                    my="xs"
-                    style={{
-                      filter: supdata.invert ? "invert(100%)" : "",
+                  <Link href={supdata.url}>
+                    <Image
+                      my="xs"
+                      style={{
+                        filter: supdata.invert ? "invert(100%)" : "",
 
-                      objectFit: "contain",
-                    }}
-                    src={supdata.img}
-                  />
+                        objectFit: "contain",
+                      }}
+                      src={supdata.img}
+                    />
+                  </Link>
                 </AnimateDiv.Row>
               </React.Fragment>
             ))}

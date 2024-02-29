@@ -212,7 +212,7 @@ export function SectionHomeHero() {
                     </Box>
 
                     <Box hiddenFrom="lg">
-                      <Title size="2.8rem" lh="3.5rem" c="rgba(255,255,255,1)">
+                      <Title size="2.5rem" lh="2.5rem" c="rgba(255,255,255,1)" ta="center">
                         {queryData.data[slideActive]?.title || ""}
                       </Title>
                     </Box>
@@ -242,7 +242,7 @@ export function SectionHomeHero() {
                       </AnimateText.Row>
                     </Group>
 
-                    <Group justify="left" gap="xs" hiddenFrom="lg">
+                    <Group justify="center" gap="xs" hiddenFrom="lg">
                       <AnimateText.Row>
                         <Text size="xs" mt="md" tt="uppercase" opacity={0.8}>
                           Current ongoing cause
