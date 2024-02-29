@@ -7,9 +7,11 @@ import {
   Box,
   Container,
   Group,
+  Image,
   Paper,
   SimpleGrid,
   Space,
+  Tabs,
   Text,
   Title,
 } from "@mantine/core";
@@ -24,6 +26,8 @@ import {
 } from "@tabler/icons-react";
 import { ContextPageProp } from "@/@context/PageProp";
 import AnimatedTitle from "@/@components/animated/AnimatedTitle";
+import { AnimatePresence } from "framer-motion";
+import { AnimateDiv } from "@/@animate/div";
 export function ModuleTeam() {
   // * DEFINITION
 
@@ -54,6 +58,76 @@ export function ModuleTeam() {
 
   // * COMPONENTS
 
+  const RenderPanel = ({ area }: { area: any }) => {
+    return (
+      <SimpleGrid cols={{ base: 1, lg: 3 }}>
+        <AnimatePresence>
+          {data
+            .filter((e: any) => {
+              return e.location.includes(area);
+            })
+            .map((userinfo: any, index: number) => (
+              <AnimateDiv.Row key={index}>
+                <Paper
+                  withBorder
+                  radius="lg"
+                  bg="none"
+                  style={{
+                    position: "relative",
+                    borderColor: "var(--mantine-color-dark-8)",
+                  }}
+                >
+                  {userinfo.image && (
+                    <Image
+                      radius="lg"
+                      src={userinfo.image}
+                      h="100%"
+                      fit="cover"
+                      style={{
+                        position: "absolute",
+                        zIndex: -1,
+                      }}
+                    />
+                  )}
+
+                  <Paper
+                    p="xl"
+                    style={{
+                      background:
+                        "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.85) 70%)",
+                      position: "relative",
+                    }}
+                  >
+                    <Space h={500} />
+
+                    <Group>
+                      <Title c="brand.5">@</Title>
+                      <div>
+                        <Title>{userinfo.name}</Title>
+                        <Text size="xs">Volunteer</Text>
+                      </div>
+                    </Group>
+
+                    <Group gap={0} justify="flex-end">
+                      <ActionIcon variant="subtle" size="xs">
+                        <IconBrandFacebook />
+                      </ActionIcon>
+                      <ActionIcon variant="subtle" size="xs">
+                        <IconBrandInstagram />
+                      </ActionIcon>
+                      <ActionIcon variant="subtle" size="xs">
+                        <IconBrandLinkedin />
+                      </ActionIcon>
+                    </Group>
+                  </Paper>
+                </Paper>
+              </AnimateDiv.Row>
+            ))}
+        </AnimatePresence>
+      </SimpleGrid>
+    );
+  };
+
   return (
     <>
       <Container size="xl">
@@ -67,57 +141,28 @@ export function ModuleTeam() {
         </AnimatedTitle>
 
         <Space h={100} />
-        {/* 
-        <Text size="md" opacity={0.5}>
-          MANAGEMENT
-        </Text> */}
 
-        <SimpleGrid cols={{ base: 1, lg: 3 }}>
-          {data.map((userinfo: any, index: number) => (
-            <Paper
-              radius="lg"
-              key={index}
-              bg="dark.9"
-              style={{
-                // backgroundImage:
-                //   "url(https://0.soompi.io/wp-content/uploads/2021/06/12125311/I.M.jpeg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <Paper
-                p="xl"
-                style={{
-                  background:
-                    "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.85) 70%)",
-                  position: "relative",
-                }}
-              >
-                <Space h={500} />
+        <Tabs defaultValue="All">
+          <Tabs.List mb="xl">
+            <Tabs.Tab value="All">All Volunteers</Tabs.Tab>
+            <Tabs.Tab value="Kathmandu">Kathmandu</Tabs.Tab>
+            <Tabs.Tab value="Pokhara">Pokhara</Tabs.Tab>
+            <Tabs.Tab value="Dharan">Dharan</Tabs.Tab>
+          </Tabs.List>
 
-                <Group>
-                  <Title c="brand.5">@</Title>
-                  <div>
-                    <Title>{userinfo.name}</Title>
-                    <Text size="xs">Volunteer</Text>
-                  </div>
-                </Group>
-
-                <Group gap={0} justify="flex-end">
-                  <ActionIcon variant="subtle" size="xs">
-                    <IconBrandFacebook />
-                  </ActionIcon>
-                  <ActionIcon variant="subtle" size="xs">
-                    <IconBrandInstagram />
-                  </ActionIcon>
-                  <ActionIcon variant="subtle" size="xs">
-                    <IconBrandLinkedin />
-                  </ActionIcon>
-                </Group>
-              </Paper>
-            </Paper>
-          ))}
-        </SimpleGrid>
+          <Tabs.Panel value="All">
+            <RenderPanel area="" />
+          </Tabs.Panel>
+          <Tabs.Panel value="Kathmandu">
+            <RenderPanel area="Kathmandu" />
+          </Tabs.Panel>
+          <Tabs.Panel value="Pokhara">
+            <RenderPanel area="Pokhara" />
+          </Tabs.Panel>
+          <Tabs.Panel value="Dharan">
+            <RenderPanel area="Dharan" />
+          </Tabs.Panel>
+        </Tabs>
       </Container>
     </>
   );
