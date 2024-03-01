@@ -1,9 +1,23 @@
-import imgApson from "@/@assets/img/volunteer/apson.jpg";
-import imgArchana from "@/@assets/img/volunteer/Archana.jpg";
-import imgJenish from "@/@assets/img/volunteer/Jenis (1).jpg";
-import imgRonesh from "@/@assets/img/volunteer/ronesh pradhan.jpg";
-import imgShristi from "@/@assets/img/volunteer/Shristi.jpg";
-import imgAnil from "@/@assets/img/volunteer/anil.jpeg";
+import imgAnil from "@/@assets/img/volunteer/kathmandu/Anil Dai.jpg";
+import imgAnjali from "@/@assets/img/volunteer/kathmandu/Anjal Dai.jpg";
+import imgApson from "@/@assets/img/volunteer/kathmandu/apson.jpg";
+import imgAshwin from "@/@assets/img/volunteer/kathmandu/Ashwin Khadgi.jpg";
+import Bibika from "@/@assets/img/volunteer/kathmandu/Bibika Koirala.jpg";
+import imgJenish from "@/@assets/img/volunteer/kathmandu/Jenis (1).jpg";
+import imgSudhan from "@/@assets/img/volunteer/kathmandu/Sudhan Dai.jpg";
+import imgRabin from "@/@assets/img/volunteer/kathmandu/Rabin Man Dangol.jpg";
+import imgRones from "@/@assets/img/volunteer/kathmandu/ronesh pradhan.jpg";
+import imgShristi from "@/@assets/img/volunteer/kathmandu/Shristi.jpg";
+import imgSuraj from "@/@assets/img/volunteer/kathmandu/Suraj Dai.jpg";
+import imgSmriti from "@/@assets/img/volunteer/kathmandu/Smita Parajuli.jpg";
+import imgSpain from "@/@assets/img/volunteer/kathmandu/Spain Magar.jpg";
+import imgSmita from "@/@assets/img/volunteer/kathmandu/Smita Parajuli.jpg";
+import imgYanzee from "@/@assets/img/volunteer/kathmandu/Yeshi.jpg";
+
+// Nepal Gunj
+import imgJyoti from "@/@assets/img/volunteer/ngj/jyoti.jpg";
+import imgBhawana from "@/@assets/img/volunteer/ngj/Bhawana Thapa.jpg";
+import imgAshesh from "@/@assets/img/volunteer/ngj/Ashesh.jpg";
 
 export const dataTeam = [
   {
@@ -31,14 +45,14 @@ export const dataTeam = [
     id: 7,
     name: "Archana Shrestha",
     email: "archanashrestha1995@gmail.com",
-    image: imgArchana.src,
+    //image: imgArchana.src,
     location: "Kathmandu",
   },
   {
     id: 8,
     name: "Ashwin Khadgi",
     email: "khadgiashwin13@gmail.com",
-    image: "",
+    image: imgAshwin.src,
     location: "Kathmandu",
   },
   {
@@ -87,14 +101,14 @@ export const dataTeam = [
     id: 33,
     name: "Rabin Man Dangol",
     email: "rdangol478@gmail.com",
-    image: "",
+    image: imgRabin.src,
     location: "Kathmandu",
   },
   {
     id: 37,
     name: "Ronesh Pradhan",
     email: "roneshpradhan12@gmail.com",
-    image: imgRonesh.src,
+    image: imgRones.src,
     location: "Kathmandu",
   },
   {
@@ -129,7 +143,7 @@ export const dataTeam = [
     id: 47,
     name: "Sudan Gurung",
     email: "sudangrg@haminepal.org",
-    image: "",
+    image: imgSudhan.src,
     location: "Kathmandu",
   },
   {
@@ -160,6 +174,7 @@ export const dataTeam = [
     email: "asheshshah423@gmail.com",
     bloodType: "AB +ve",
     status: "Active",
+    image: imgAshesh.src,
   },
   {
     name: "Bhawana Thapa",
@@ -168,6 +183,7 @@ export const dataTeam = [
     email: "dbhabnathapa99@gmail.com",
     bloodType: "A +ve",
     status: "Active",
+    image: imgBhawana.src,
   },
   {
     name: "Jyoti Sri Chhetri",
@@ -176,6 +192,7 @@ export const dataTeam = [
     email: "jyoti.kshetri0504@gmail.com",
     bloodType: "B +ve",
     status: "Active",
+    image: imgJyoti.src,
   },
   {
     name: "Sabin Lama",

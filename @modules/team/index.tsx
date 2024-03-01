@@ -28,6 +28,9 @@ import { ContextPageProp } from "@/@context/PageProp";
 import AnimatedTitle from "@/@components/animated/AnimatedTitle";
 import { AnimatePresence } from "framer-motion";
 import { AnimateDiv } from "@/@animate/div";
+
+import imgBrand from "@/@assets/brand/logoOriginal.png";
+
 export function ModuleTeam() {
   // * DEFINITION
 
@@ -90,6 +93,21 @@ export function ModuleTeam() {
                     />
                   )}
 
+                  {!userinfo.image && (
+                    <Image
+                      radius="lg"
+                      src={imgBrand.src}
+                      h={100}
+                      fit="contain"
+                      mt={200}
+                      opacity={.3}
+                      style={{
+                        position: "absolute",
+                        zIndex: -1,
+                      }}
+                    />
+                  )}
+
                   <Paper
                     p="xl"
                     style={{
@@ -143,18 +161,24 @@ export function ModuleTeam() {
         <Space h={100} />
 
         <Tabs defaultValue="All">
-          <Tabs.List mb="xl">
-            <Tabs.Tab value="All">All Volunteers</Tabs.Tab>
-            <Tabs.Tab value="Kathmandu">Kathmandu</Tabs.Tab>
-            <Tabs.Tab value="Pokhara">Pokhara</Tabs.Tab>
-            <Tabs.Tab value="Dharan">Dharan</Tabs.Tab>
-          </Tabs.List>
+          <AnimateDiv.Row>
+            <Tabs.List mb="xl">
+              <Tabs.Tab value="All">All Volunteers</Tabs.Tab>
+              <Tabs.Tab value="Kathmandu">Kathmandu</Tabs.Tab>
+              <Tabs.Tab value="Nepalgunj">Nepalgunj</Tabs.Tab>
+              <Tabs.Tab value="Pokhara">Pokhara</Tabs.Tab>
+              <Tabs.Tab value="Dharan">Dharan</Tabs.Tab>
+            </Tabs.List>
+          </AnimateDiv.Row>
 
           <Tabs.Panel value="All">
             <RenderPanel area="" />
           </Tabs.Panel>
           <Tabs.Panel value="Kathmandu">
             <RenderPanel area="Kathmandu" />
+          </Tabs.Panel>
+          <Tabs.Panel value="Nepalgunj">
+            <RenderPanel area="Nepalgunj" />
           </Tabs.Panel>
           <Tabs.Panel value="Pokhara">
             <RenderPanel area="Pokhara" />
