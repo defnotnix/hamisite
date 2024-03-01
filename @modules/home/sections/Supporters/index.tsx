@@ -17,16 +17,21 @@ import {
 } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import { Play } from "@phosphor-icons/react";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Cards } from "@/@components/card";
 import { influencerTestimonials } from "@/@json/data/testimonial";
 import { dataSupporters } from "@/@json/data/supporters";
 import { AnimateDiv } from "@/@animate/div";
 import Link from "next/link";
 
+import AutoScroll from "embla-carousel-auto-scroll";
+
 export function SectionHomeSupporters() {
   // * DEFINITION
   const theme = useMantineTheme();
+  const autoplay = useRef(AutoScroll({ speed: 0.6, direction: "backward" }));
+  const autoplay2 = useRef(AutoScroll({ speed: 0.6 }));
+  const autoplay3 = useRef(AutoScroll({ speed: 0.6 }));
 
   // * STATES
 
@@ -88,7 +93,7 @@ export function SectionHomeSupporters() {
 
   return (
     <>
-      <Container size="lg" py={{ base: "xl", lg: 100 }}>
+      <Container size="xl" py={{ base: "xl", lg: 100 }}>
         <Group gap="xs" justify="center">
           <Text size="xs" opacity={0.3}>
             SUPPORTERS
@@ -120,10 +125,37 @@ export function SectionHomeSupporters() {
         <Title my="xl" size="1.6rem" ta="center" mb="100">
           BRANDS THAT SUPPORT US
         </Title>
+      </Container>
 
-        <SimpleGrid cols={{ base: 4, lg: 6 }} spacing="xl">
-          {dataSupporters.map((supdata: any, index: number) => (
-            <React.Fragment key={index}>
+      <Container
+        size="xl"
+        style={{
+          position: "relative",
+        }}
+      >
+        <Paper
+          h={600}
+          style={{
+            position: "absolute",
+            width: "100%",
+            left: 0,
+            zIndex: 4,
+            pointerEvents: "none",
+            background:
+              "linear-gradient(90deg, #000000ff 0%, #00000000 20%, #00000000 80%, #000000ff 100%)",
+          }}
+        />
+
+        <Carousel
+          loop={true}
+          withIndicators={false}
+          withControls={false}
+          slideSize={{ base: "20%", lg: "14.285%" }}
+          align={"start"}
+          plugins={[autoplay3.current]}
+        >
+          {dataSupporters.slice(0, 10).map((supdata: any, index: number) => (
+            <Carousel.Slide key={index}>
               <AnimateDiv.Row>
                 <Link href={supdata.url}>
                   <Image
@@ -137,9 +169,63 @@ export function SectionHomeSupporters() {
                   />
                 </Link>
               </AnimateDiv.Row>
-            </React.Fragment>
+            </Carousel.Slide>
           ))}
-        </SimpleGrid>
+        </Carousel>
+        <Carousel
+          loop={true}
+          withIndicators={false}
+          withControls={false}
+          slideSize={{ base: "20%", lg: "16.66%" }}
+          align={"start"}
+          plugins={[autoplay.current]}
+        >
+          {dataSupporters.slice(10, 20).map((supdata: any, index: number) => (
+            <Carousel.Slide key={index}>
+              <AnimateDiv.Row>
+                <Link href={supdata.url}>
+                  <Image
+                    my="xs"
+                    style={{
+                      filter: supdata.invert ? "invert(100%)" : "",
+
+                      objectFit: "contain",
+                    }}
+                    src={supdata.img}
+                  />
+                </Link>
+              </AnimateDiv.Row>
+            </Carousel.Slide>
+          ))}
+        </Carousel>
+        {/* <Carousel
+          loop={true}
+          withIndicators={false}
+          withControls={false}
+          slideSize={{ base: "20%", lg: "16.66%" }}
+          align={"start"}
+          plugins={[autoplay2.current]}
+          onMouseEnter={autoplay2.current.stop}
+          onMouseLeave={autoplay2.current.reset}
+        >
+          {dataSupporters.slice(20, 80).map((supdata: any, index: number) => (
+            <Carousel.Slide key={index}>
+              <AnimateDiv.Row>
+                <Link href={supdata.url}>
+                  <Image
+                    my="xs"
+                    style={{
+                      filter: supdata.invert ? "invert(100%)" : "",
+
+                      objectFit: "contain",
+                    }}
+                    src={supdata.img}
+                  />
+                </Link>
+              </AnimateDiv.Row>
+            </Carousel.Slide>
+          ))}
+        </Carousel> */}
       </Container>
     </>
   );
