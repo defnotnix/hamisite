@@ -62,13 +62,6 @@ export function SectionFeatured() {
     initialData: [],
   });
 
-  useEffect(() => {
-    dispatch({
-      type: "PAGE_LOADED",
-      value: "CAUSES",
-    });
-  }, [dispatch]);
-
   // * ANIMATE
 
   // * FUNCTION
