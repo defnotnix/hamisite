@@ -4,6 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 //mantine
 import {
   ActionIcon,
+  Badge,
   Box,
   Container,
   Group,
@@ -69,6 +70,9 @@ export function ModuleTeam() {
             .filter((e: any) => {
               return e.location.includes(area);
             })
+            .filter((e: any) => {
+              return e.status == "Active";
+            })
             .map((userinfo: any, index: number) => (
               <AnimateDiv.Row key={index}>
                 <Paper
@@ -100,7 +104,7 @@ export function ModuleTeam() {
                       h={100}
                       fit="contain"
                       mt={200}
-                      opacity={.3}
+                      opacity={0.3}
                       style={{
                         position: "absolute",
                         zIndex: -1,
@@ -141,6 +145,89 @@ export function ModuleTeam() {
                 </Paper>
               </AnimateDiv.Row>
             ))}
+          {data
+            .filter((e: any) => {
+              return e.location.includes(area);
+            })
+            .filter((e: any) => {
+              return e.status == "Inactive";
+            })
+            .map((userinfo: any, index: number) => (
+              <AnimateDiv.Row key={index}>
+                <Paper
+                  withBorder
+                  radius="lg"
+                  bg="none"
+                  style={{
+                    position: "relative",
+                    borderColor: "var(--mantine-color-dark-8)",
+                  }}
+                >
+                  {userinfo.image && (
+                    <Image
+                      radius="lg"
+                      src={userinfo.image}
+                      h="100%"
+                      fit="cover"
+                      style={{
+                        position: "absolute",
+                        zIndex: -1,
+                      }}
+                    />
+                  )}
+
+                  {!userinfo.image && (
+                    <Image
+                      radius="lg"
+                      src={imgBrand.src}
+                      h={100}
+                      fit="contain"
+                      mt={200}
+                      opacity={0.3}
+                      style={{
+                        position: "absolute",
+                        zIndex: -1,
+                      }}
+                    />
+                  )}
+
+                  <Paper
+                    p="xl"
+                    style={{
+                      background:
+                        "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.85) 70%)",
+                      position: "relative",
+                    }}
+                  >
+                    <Space h={500} />
+
+                    <Group>
+                      <Title c="brand.5">@</Title>
+                      <div>
+                        <Title>{userinfo.name}</Title>
+                        <Text size="xs">Volunteer</Text>
+                      </div>
+                    </Group>
+
+                    <Group gap={0} justify="flex-end">
+                      <Badge mr="xs" size="xs">
+                        Inactive
+                      </Badge>
+                      <ActionIcon variant="subtle" size="xs">
+                        <IconBrandFacebook />
+                      </ActionIcon>
+                      <ActionIcon variant="subtle" size="xs">
+                        <IconBrandInstagram />
+                      </ActionIcon>
+                      <ActionIcon variant="subtle" size="xs">
+                        <IconBrandLinkedin />
+                      </ActionIcon>
+                    </Group>
+                  </Paper>
+                </Paper>
+              </AnimateDiv.Row>
+            ))}
+          F
         </AnimatePresence>
       </SimpleGrid>
     );
@@ -181,7 +268,11 @@ export function ModuleTeam() {
             <RenderPanel area="Nepalgunj" />
           </Tabs.Panel>
           <Tabs.Panel value="Pokhara">
-            <RenderPanel area="Pokhara" />
+            <>
+              <Text size="xl" ta="center" mt="100">
+                Stay tuned for the forthcoming data on volunteers from Pokhara!
+              </Text>
+            </>
           </Tabs.Panel>
           <Tabs.Panel value="Dharan">
             <RenderPanel area="Dharan" />
