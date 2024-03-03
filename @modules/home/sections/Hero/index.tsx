@@ -5,6 +5,7 @@ import React, { useContext, useState } from "react";
 import {
   AspectRatio,
   Box,
+  Button,
   Center,
   Container,
   Divider,
@@ -36,6 +37,7 @@ import AnimatedTitle from "@/@components/animated/AnimatedTitle";
 
 import { variantContainer, variantContainerParent } from "@/@animate/container";
 import { AnimateText } from "@/@animate/text";
+import { useRouter } from "next/navigation";
 
 export function SectionHomeHero() {
   // * DEFINITION
@@ -50,6 +52,7 @@ export function SectionHomeHero() {
   // > CONTEXT
 
   const { state, dispatch } = useContext(ContextPageProp.Context);
+  const Router = useRouter();
 
   // * PRELOADING
 
@@ -212,7 +215,12 @@ export function SectionHomeHero() {
                     </Box>
 
                     <Box hiddenFrom="lg">
-                      <Title size="2.5rem" lh="2.5rem" c="rgba(255,255,255,1)" ta="center">
+                      <Title
+                        size="2.5rem"
+                        lh="2.5rem"
+                        c="rgba(255,255,255,1)"
+                        ta="center"
+                      >
                         {queryData.data[slideActive]?.title || ""}
                       </Title>
                     </Box>
@@ -228,17 +236,23 @@ export function SectionHomeHero() {
                         </Text>
                       </AnimateText.Row>
                       <AnimateText.Row>
-                        <Link href="#">
-                          <Text
-                            c="brand.5"
-                            size="xs"
-                            mt="md"
-                            tt="uppercase"
-                            opacity={0.8}
-                          >
-                            VIEW CAUSE
-                          </Text>
-                        </Link>
+                        <Button
+                          mt="md"
+                          size="xs"
+                          variant="subtle"
+                          onClick={() => {
+                            dispatch({
+                              type: "TRANSITION_START",
+                              value: "Causes",
+                            });
+
+                            setTimeout(() => {
+                              Router.push("/campaign/causes/1");
+                            }, 1000);
+                          }}
+                        >
+                          VIEW CAUSE
+                        </Button>
                       </AnimateText.Row>
                     </Group>
 

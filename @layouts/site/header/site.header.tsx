@@ -122,7 +122,16 @@ export function LayoutSiteHeader() {
             color: "rgba(255,255,255,.3)",
           }}
         >
-          HAMI NEPAL /{" "}
+          <span
+            onClick={() => {
+              if (Pathname !== "/") {
+                handleNavClick("/", "Home");
+              }
+            }}
+          >
+            HAMI NEPAL
+          </span>{" "}
+          /{" "}
           <span
             style={{
               color: theme.colors.brand[5],
@@ -157,9 +166,13 @@ export function LayoutSiteHeader() {
               }}
             >
               <Grid.Col span={{ base: 3 }}>
-                <UnstyledButton onClick={()=>{
-                  handleNavClick("/","Home")
-                }}>
+                <UnstyledButton
+                  onClick={() => {
+                    if (Pathname !== "/") {
+                      handleNavClick("/", "Home");
+                    }
+                  }}
+                >
                   <Image
                     height={24}
                     width={24}

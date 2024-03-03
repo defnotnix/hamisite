@@ -48,6 +48,20 @@ export function CardCauseHome({ data }: { data: any }) {
             overflow: "hidden",
           }}
           className={classes.videoBackground}
+          onClick={() => {
+            if (data.id == 1) {
+              Router.push("/campaign/causes/" + data.id);
+            } else {
+              showNotification({
+                color: "blue",
+                icon: <Info />,
+                title: "Work in progress",
+                id: "1",
+                message:
+                  "Data is currently being updated. Please check again later.",
+              });
+            }
+          }}
         >
           {!hovered ? (
             <Image
@@ -108,7 +122,6 @@ export function CardCauseHome({ data }: { data: any }) {
           transition: "ease-in-out .3s",
           background: "none",
           opacity: hovered ? 1 : 0.6,
-          cursor: "pointer",
         }}
       >
         <ImageCard />

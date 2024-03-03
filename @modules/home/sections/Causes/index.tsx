@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 //mantine
 import {
   Container,
@@ -27,13 +27,19 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { variantContainer, variantContainerParent } from "@/@animate/container";
 import { AnimateText } from "@/@animate/text";
+import { ContextPageProp } from "@/@context/PageProp";
+import { useRouter } from "next/navigation";
 
 export function SectionHomeCauses() {
   // * DEFINITION
 
   const theme = useMantineTheme();
+  const Router = useRouter();
 
   // * STATE
+
+  // > CONTEXT
+  const { state, dispatch } = useContext(ContextPageProp.Context);
 
   // * PRELOADING
 
@@ -115,6 +121,16 @@ export function SectionHomeCauses() {
                       color: theme.colors.gray[1],
                       textAlign: "right",
                     }}
+                    onClick={() => {
+                      dispatch({
+                        type: "TRANSITION_START",
+                        value: "Causes",
+                      });
+
+                      setTimeout(() => {
+                        Router.push("/campaign/causes");
+                      }, 1000);
+                    }}
                   >
                     SEE MORE
                   </Title>
@@ -138,7 +154,7 @@ export function SectionHomeCauses() {
             slideGap={"xs"}
           >
             {queryData.data.map((cause: any, index: any) => (
-              <Carousel.Slide key={index}>
+              <Carousel.Slide key={index} style={{ cursor: "pointer" }}>
                 <motion.div variants={variantContainer}>
                   <CardCause.Home data={cause} />
                 </motion.div>
