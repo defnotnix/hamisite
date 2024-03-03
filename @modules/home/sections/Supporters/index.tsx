@@ -33,6 +33,8 @@ export function SectionHomeSupporters() {
   const autoplay2 = useRef(AutoScroll({ speed: 0.6 }));
   const autoplay3 = useRef(AutoScroll({ speed: 0.6 }));
 
+  const autoplay4 = useRef(AutoScroll({ speed: 0.3 }));
+
   // * STATES
 
   const [active, setActive] = useState(0);
@@ -103,17 +105,38 @@ export function SectionHomeSupporters() {
         <Title my="xl" size="1.6rem" ta="center">
           PEOPLE THAT SUPPORT US
         </Title>
+      </Container>
+      <Container
+        size="xl"
+        style={{
+          position: "relative",
+        }}
+      >
+        <Paper
+          h={600}
+          style={{
+            position: "absolute",
+            width: "100%",
+            left: 0,
+            zIndex: 4,
+            pointerEvents: "none",
+            background:
+              "linear-gradient(90deg, #000000ff 0%, #00000000 20%, #00000000 80%, #000000ff 100%)",
+          }}
+        />
 
         <Carousel
-          mb={100}
+          loop={true}
+          withIndicators={false}
+          withControls={false}
           slideSize={{
             base: "100%",
             lg: "33.33%",
           }}
           initialSlide={0}
-          withControls={false}
           align="start"
           slideGap={"md"}
+          plugins={[autoplay4.current]}
         >
           {influencerTestimonials.map((testimonial: any, index: number) => (
             <Carousel.Slide key={index}>
@@ -121,11 +144,10 @@ export function SectionHomeSupporters() {
             </Carousel.Slide>
           ))}
         </Carousel>
-
-        <Title my="xl" size="1.6rem" ta="center" mb="100">
-          BRANDS THAT SUPPORT US
-        </Title>
       </Container>
+      <Title size="1.6rem" ta="center" my="100">
+        BRANDS THAT SUPPORT US
+      </Title>
 
       <Container
         size="xl"
@@ -198,34 +220,6 @@ export function SectionHomeSupporters() {
             </Carousel.Slide>
           ))}
         </Carousel>
-        {/* <Carousel
-          loop={true}
-          withIndicators={false}
-          withControls={false}
-          slideSize={{ base: "20%", lg: "16.66%" }}
-          align={"start"}
-          plugins={[autoplay2.current]}
-          onMouseEnter={autoplay2.current.stop}
-          onMouseLeave={autoplay2.current.reset}
-        >
-          {dataSupporters.slice(20, 80).map((supdata: any, index: number) => (
-            <Carousel.Slide key={index}>
-              <AnimateDiv.Row>
-                <Link href={supdata.url}>
-                  <Image
-                    my="xs"
-                    style={{
-                      filter: supdata.invert ? "invert(100%)" : "",
-
-                      objectFit: "contain",
-                    }}
-                    src={supdata.img}
-                  />
-                </Link>
-              </AnimateDiv.Row>
-            </Carousel.Slide>
-          ))}
-        </Carousel> */}
       </Container>
     </>
   );
