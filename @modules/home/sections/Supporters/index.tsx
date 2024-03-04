@@ -137,6 +137,8 @@ export function SectionHomeSupporters() {
           align="start"
           slideGap={"md"}
           plugins={[autoplay4.current]}
+          onMouseEnter={autoplay4.current.stop}
+          onMouseLeave={autoplay4.current.play}
         >
           {influencerTestimonials.map((testimonial: any, index: number) => (
             <Carousel.Slide key={index}>

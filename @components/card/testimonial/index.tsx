@@ -1,5 +1,16 @@
-import { Avatar, Grid, Group, Paper, Space, Text } from "@mantine/core";
+import {
+  ActionIcon,
+  Avatar,
+  Grid,
+  Group,
+  Paper,
+  Space,
+  Text,
+  Tooltip,
+} from "@mantine/core";
 import { Quotes } from "@phosphor-icons/react";
+import { IconBrandFacebook, IconBrandInstagram } from "@tabler/icons-react";
+import Link from "next/link";
 
 export function CardTestimonial({ data }: { data: any }) {
   return (
@@ -40,12 +51,30 @@ export function CardTestimonial({ data }: { data: any }) {
                 <Text size="xs" opacity={0.5}>
                   {data.title}
                 </Text>
+                <Group gap="4" mt="xs">
+                  <Tooltip color="dark" label={data.title + "'s Instagram"}>
+                    <Link href={"https://www.instagram.com/" + data.instagram}>
+                      <ActionIcon size="xs" variant="light" color="orange">
+                        <IconBrandInstagram />
+                      </ActionIcon>
+                    </Link>
+                  </Tooltip>
+                  {data.facebook && (
+                    <Tooltip color="dark" label={data.name + "'s Facebook"}>
+                      <Link href={"https://www.facebook.com/" + data.instagram}>
+                        <ActionIcon size="xs" variant="light" color="blue">
+                          <IconBrandFacebook />
+                        </ActionIcon>
+                      </Link>
+                    </Tooltip>
+                  )}
+                </Group>
               </div>
             </Group>
           </Grid.Col>
           <Grid.Col span={4}>
             <Group justify="flex-end">
-              <Avatar src={data.image} />
+              <Avatar size="lg" src={data.image} />
             </Group>
           </Grid.Col>
         </Grid>
