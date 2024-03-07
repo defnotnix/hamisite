@@ -15,7 +15,7 @@ import {
 import classes from "./footer.module.css";
 import { ArrowRight } from "@phosphor-icons/react";
 import { configNavPage } from "@/@config/nav/page";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export function LayoutSiteFooter() {
   const Router = useRouter();
