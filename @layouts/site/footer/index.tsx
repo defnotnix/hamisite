@@ -15,8 +15,11 @@ import {
 import classes from "./footer.module.css";
 import { ArrowRight } from "@phosphor-icons/react";
 import { configNavPage } from "@/@config/nav/page";
+import { useRouter } from "next/router";
 
 export function LayoutSiteFooter() {
+  const Router = useRouter();
+
   return (
     <>
       <section className={classes.root}>
@@ -28,12 +31,22 @@ export function LayoutSiteFooter() {
             spacing={{ base: "md", lg: "5rem" }}
           >
             <Stack gap="xl">
-              <Text size="3rem" lh="3.5rem" visibleFrom="lg"   ta={{ base: "center", lg: "left" }}>
+              <Text
+                size="3rem"
+                lh="3.5rem"
+                visibleFrom="lg"
+                ta={{ base: "center", lg: "left" }}
+              >
                 Join us in our fight for a better future for our societies and
                 its people.
               </Text>
 
-              <Text size="2rem" lh="2.5rem" hiddenFrom="lg"   ta={{ base: "center", lg: "left" }}>
+              <Text
+                size="2rem"
+                lh="2.5rem"
+                hiddenFrom="lg"
+                ta={{ base: "center", lg: "left" }}
+              >
                 Join us in our fight for a better future for our societies and
                 its people.
               </Text>
@@ -45,7 +58,14 @@ export function LayoutSiteFooter() {
               />
 
               <div>
-                <Button rightSection={<ArrowRight />} variant="light" visibleFrom="lg">
+                <Button
+                  rightSection={<ArrowRight />}
+                  variant="light"
+                  visibleFrom="lg"
+                  onClick={() => {
+                    Router.push("https://forms.gle/jxWV7QkH6QMHbYuJ6");
+                  }}
+                >
                   Apply as a volunteer
                 </Button>
               </div>
