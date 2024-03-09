@@ -1,10 +1,14 @@
 "use client";
 
 import {
+  ActionIcon,
+  Badge,
   Button,
   Container,
   Divider,
+  Group,
   SimpleGrid,
+  Space,
   Stack,
   Text,
   TextInput,
@@ -16,6 +20,11 @@ import classes from "./footer.module.css";
 import { ArrowRight } from "@phosphor-icons/react";
 import { configNavPage } from "@/@config/nav/page";
 import { useRouter } from "next/navigation";
+import {
+  IconBrandFacebook,
+  IconBrandInstagram,
+  IconMail,
+} from "@tabler/icons-react";
 
 export function LayoutSiteFooter() {
   const Router = useRouter();
@@ -23,9 +32,9 @@ export function LayoutSiteFooter() {
   return (
     <>
       <section className={classes.root}>
-        <Divider opacity={0.5} mb={100} />
+        <Space mb={100} />
 
-        <Container size="xl" px={{ base: "xl", lg: 0 }}>
+        <Container size="xl" px={{ base: "xl", xl: 0 }}>
           <SimpleGrid
             cols={{ base: 1, lg: 2 }}
             spacing={{ base: "md", lg: "5rem" }}
@@ -97,13 +106,92 @@ export function LayoutSiteFooter() {
                   <Text size="sm" ta={{ base: "center", lg: "left" }}>
                     info@haminepal.org
                   </Text>
+
+                  <Text
+                    mt="md"
+                    size="xs"
+                    opacity={0.5}
+                    mb="xs"
+                    ta={{ base: "center", lg: "left" }}
+                  >
+                    SOCIALS
+                  </Text>
+                  <Group gap="xs" visibleFrom="lg">
+                    <ActionIcon
+                      variant="light"
+                      onClick={() => {
+                        Router.push("https://www.instagram.com/haminepal_/");
+                      }}
+                    >
+                      <IconBrandFacebook size={22} stroke={1} />
+                    </ActionIcon>
+                    <ActionIcon
+                      variant="light"
+                      onClick={() => {
+                        Router.push("https://www.facebook.com/HamiNepalNPO/");
+                      }}
+                    >
+                      <IconBrandInstagram size={22} stroke={1} />
+                    </ActionIcon>
+                    <ActionIcon
+                      variant="light"
+                      onClick={() => {
+                        Router.push("mailto:info@haminepal.org");
+                      }}
+                    >
+                      <IconMail size={22} stroke={1} />
+                    </ActionIcon>
+                  </Group>
+
+                  <Group gap="xs" justify="center" hiddenFrom="lg">
+                    <ActionIcon
+                      variant="light"
+                      onClick={() => {
+                        Router.push("https://www.instagram.com/haminepal_/");
+                      }}
+                    >
+                      <IconBrandFacebook size={22} stroke={1} />
+                    </ActionIcon>
+                    <ActionIcon
+                      variant="light"
+                      onClick={() => {
+                        Router.push("https://www.facebook.com/HamiNepalNPO/");
+                      }}
+                    >
+                      <IconBrandInstagram size={22} stroke={1} />
+                    </ActionIcon>
+                    <ActionIcon
+                      variant="light"
+                      onClick={() => {
+                        Router.push("mailto:info@haminepal.org");
+                      }}
+                    >
+                      <IconMail size={22} stroke={1} />
+                    </ActionIcon>
+                  </Group>
                 </Stack>
               </div>
             </SimpleGrid>
           </SimpleGrid>
         </Container>
+        <Space mb={100} />
 
-        <div className={classes.textoverlay}>हामी नेपाल</div>
+        <Container size="xl" px={{ base: "xl", xl: 0 }}>
+          <Group justify="space-between" gap="xs">
+            <Text opacity={0.5} size="xs">
+              Copyright @ 2024 Hami Nepal
+            </Text>
+
+            <Group gap="xs">
+              <Badge variant="dot" color="teal" tt="none">
+                <Text size="xs">Beta Release - v0.1.7</Text>
+              </Badge>
+              <Text size="xs">Hami Nepal x Void Studio</Text>
+            </Group>
+          </Group>
+        </Container>
+
+        {/* <div className={classes.textoverlay}>हामी नेपाल</div> */}
       </section>
     </>
   );

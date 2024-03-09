@@ -62,7 +62,7 @@ export function SectionHomeCauses() {
         mb={{ base: 64, lg: 0 }}
         px={{
           base: "xl",
-          lg: 0,
+          xl: 0,
         }}
       >
         <AnimateText.Container>

@@ -21,3 +21,11 @@
 .navitem_active {
   color: var(--mantine-color-gray-0);
 }
+
+.breadhome {
+  transition: 0.2s ease-in-out;
+}
+
+.breadhome:hover {
+  color: var(--mantine-color-brand-5);
+}

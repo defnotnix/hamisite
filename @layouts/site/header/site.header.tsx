@@ -115,33 +115,72 @@ export function LayoutSiteHeader() {
       exit="exit"
       transition={{ type: "tween" }}
     >
-      <Group justify="center">
-        <Text
-          size="xs"
+      {state.current == "home" ? (
+        <Group
+          justify="center"
           style={{
-            color: "rgba(255,255,255,.3)",
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            handlersNav.toggle();
           }}
         >
-          <span
-            onClick={() => {
-              if (Pathname !== "/") {
-                handleNavClick("/", "Home");
-              }
-            }}
-          >
-            HAMI NEPAL
-          </span>{" "}
-          /{" "}
-          <span
+          <Text
+            size="xs"
             style={{
-              color: theme.colors.brand[5],
-              textTransform: "uppercase",
+              color: "rgba(255,255,255,.3)",
             }}
           >
-            {state.current}
-          </span>
-        </Text>
-      </Group>
+            <span
+              style={{
+                color: theme.colors.brand[5],
+                textTransform: "uppercase",
+              }}
+            >
+              {state.current}
+            </span>
+            <span
+              onClick={() => {
+                if (Pathname !== "/") {
+                  handleNavClick("/", "Home");
+                }
+              }}
+            >
+              / HAMI NEPAL
+            </span>
+          </Text>
+        </Group>
+      ) : (
+        <Group justify="center">
+          <Text
+            size="xs"
+            style={{
+              color: "rgba(255,255,255,.3)",
+              cursor: "pointer",
+            }}
+          >
+            <span
+              className={classes.breadhome}
+              onClick={() => {
+                if (Pathname !== "/") {
+                  handleNavClick("/", "Home");
+                }
+              }}
+            >
+              HAMI NEPAL
+            </span>{" "}
+            /{" "}
+            <span
+              style={{
+                color: theme.colors.brand[5],
+                textTransform: "uppercase",
+              }}
+            >
+              {state.current}
+            </span>
+          </Text>
+        </Group>
+      )}
     </motion.div>
   );
 

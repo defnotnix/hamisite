@@ -96,15 +96,6 @@ export const dataTeam = [
     location: "Kathmandu",
   },
   {
-    name: "Ayub Gajmer",
-    address: "Jyatha",
-    phone: "98881378692",
-    email: "ayubscout3@gmail.com",
-    blood_type: "O +ve",
-    status: "Inactive",
-    location: "Kathmandu",
-  },
-  {
     name: "Bandana Shrestha",
     address: "Dhapasi",
     phone: "9843684874",
@@ -131,15 +122,7 @@ export const dataTeam = [
     status: "Active",
     location: "Kathmandu",
   },
-  {
-    name: "Bidhan Shrestha",
-    address: "Machchhegaun - Chandragiri",
-    phone: "98485811587",
-    email: "bidhanshrofficial@gmail.com",
-    blood_type: "A +ve",
-    status: "Inactive",
-    location: "Kathmandu",
-  },
+
   {
     name: "Binay Rana Magar",
     address: "Dallu",

@@ -36,31 +36,18 @@ export function CardCauseHome({ data }: { data: any }) {
   // * COMPONENTS
 
   const ImageCard = () => {
-    const { hovered, ref } = useHover();
-
     return (
       <>
         <Paper
-          ref={ref}
           visibleFrom="lg"
           style={{
             height: 600,
             overflow: "hidden",
+            pointerEvents: "none",
           }}
           className={classes.videoBackground}
-          onClick={() => {
-            if (data.id == 1) {
-              Router.push("/campaign/causes/" + data.id);
-            } else {
-              showNotification({
-                color: "blue",
-                icon: <Info />,
-                title: "Work in progress",
-                id: "1",
-                message:
-                  "Data is currently being updated. Please check again later.",
-              });
-            }
+          onClick={(e) => {
+            e.preventDefault();
           }}
         >
           {!hovered ? (
@@ -102,6 +89,7 @@ export function CardCauseHome({ data }: { data: any }) {
   return (
     <>
       <Paper
+        ref={ref}
         onClick={() => {
           if (data.id == 1) {
             Router.push("/campaign/causes/" + data.id);
@@ -116,7 +104,6 @@ export function CardCauseHome({ data }: { data: any }) {
             });
           }
         }}
-        ref={ref}
         py={54}
         style={{
           transition: "ease-in-out .3s",

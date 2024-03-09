@@ -6,6 +6,7 @@ import React, { useContext, useEffect, useState } from "react";
 //mantine
 import {
   ActionIcon,
+  Alert,
   Anchor,
   Badge,
   Box,
@@ -35,6 +36,7 @@ import {} from "@mantine/hooks";
 import {
   CaretDown,
   Image,
+  Info,
   MagnifyingGlass,
   MicrosoftExcelLogo,
   Printer,
@@ -66,7 +68,7 @@ export function SectionHomeTransparency() {
       <Container
         px={{
           base: "xl",
-          lg: 0,
+          xl: 0,
         }}
       >
         <Grid gutter={{ base: "sm", lg: 54 }}>
@@ -124,13 +126,13 @@ export function SectionHomeTransparency() {
                       fontFamily: "var(--font-heading)",
                     }}
                   >
-                    Rs. -
+                    Rs.22,47,86,190
                     <span
                       style={{
                         color: theme.colors.gray[8],
                       }}
                     >
-                      --
+                      .00
                     </span>
                   </Text>
                 </motion.div>
@@ -150,13 +152,13 @@ export function SectionHomeTransparency() {
                       fontFamily: "var(--font-heading)",
                     }}
                   >
-                    Rs. -
+                    Rs.7,03,82,390
                     <span
                       style={{
                         color: theme.colors.gray[8],
                       }}
                     >
-                      --
+                      .00
                     </span>
                   </Text>
                 </motion.div>
@@ -176,13 +178,13 @@ export function SectionHomeTransparency() {
                       fontFamily: "var(--font-heading)",
                     }}
                   >
-                    Rs. -
+                    Rs. 19,11,28,460
                     <span
                       style={{
                         color: theme.colors.gray[8],
                       }}
                     >
-                      --
+                      .00
                     </span>
                   </Text>
                 </motion.div>
@@ -202,33 +204,42 @@ export function SectionHomeTransparency() {
                       fontFamily: "var(--font-heading)",
                     }}
                   >
-                    Rs. -
+                    Rs. 54,98,17,120
                     <span
                       style={{
                         color: theme.colors.gray[8],
                       }}
                     >
-                      --
+                      .00
                     </span>
                   </Text>
                 </motion.div>
               </SimpleGrid>
               <motion.div variants={variantContainer}>
                 <Progress.Root size={8} my="xl">
-                  <Tooltip label="Funds Donated - 12,32,00--">
-                    <Progress.Section value={25} color={theme.colors.teal[7]} />
-                  </Tooltip>
-                  <Tooltip label="Kinds Donated - 12,32,00--">
+                  <Tooltip label="Funds Donated - 22,47,86,190">
                     <Progress.Section
-                      value={25}
+                      value={40.91}
+                      color={theme.colors.teal[7]}
+                    />
+                  </Tooltip>
+                  <Tooltip label="Kinds Donated - 7,03,82,390">
+                    <Progress.Section
+                      value={12.8}
                       color={theme.colors.orange[4]}
                     />
                   </Tooltip>
-                  <Tooltip label="Total Used - 12,32,00--">
-                    <Progress.Section value={15} color={theme.colors.red[5]} />
+                  <Tooltip label="Total Used - 19,11,28,460">
+                    <Progress.Section
+                      value={34.76}
+                      color={theme.colors.red[5]}
+                    />
                   </Tooltip>
-                  <Tooltip label="Remaining - 12,32,00--">
-                    <Progress.Section value={35} color={theme.colors.gray[7]} />
+                  <Tooltip label="Remaining - 63,52,008">
+                    <Progress.Section
+                      value={11.54}
+                      color={theme.colors.gray[7]}
+                    />
                   </Tooltip>
                 </Progress.Root>
               </motion.div>
@@ -249,17 +260,36 @@ export function SectionHomeTransparency() {
                     fontFamily: "var(--font-heading)",
                   }}
                 >
-                  Rs. -
+                  Rs. 63,52,008
                   <span
                     style={{
                       color: theme.colors.gray[8],
                     }}
                   >
-                    --
+                    .00
                   </span>
                 </Text>
               </motion.div>
             </motion.div>
+
+            <AnimateText.Row>
+              <Group justify="center">
+                <Alert
+                  variant="light"
+                  color="teal"
+                  title="Notice! "
+                  icon={<Info />}
+                  mt="xl"
+                >
+                  <Text size="xs" mb="md">
+                    We are currently in the process of building this site. Our
+                    team is transferring all previous account records, and soon
+                    it will be fully operational for your convenience. We
+                    appreciate your patience during this time.
+                  </Text>
+                </Alert>
+              </Group>
+            </AnimateText.Row>
           </Grid.Col>
         </Grid>
       </Container>

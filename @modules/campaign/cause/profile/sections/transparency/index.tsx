@@ -116,8 +116,8 @@ export function SectionTransparency({ data }: { data: any }) {
                       <br />
                       <br />
                       Our dedicated team is working hard on this revamped site
-                      in time for the English New Year in 2024. Thank you
-                      immensely for your patience and ongoing support.
+                      in time. Thank you immensely for your patience and ongoing
+                      support.
                       <br />
                       <br />
                       With heartfelt gratitude,

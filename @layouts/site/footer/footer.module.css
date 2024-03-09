@@ -1,11 +1,10 @@
 .root {
-  margin-top: 10rem;
-  //background: var(--mantine-color-dark-9);
+  margin-top: 16rem;
+  background: var(--mantine-color-dark-9);
   padding: 5rem 0;
-
   position: relative;
   overflow: hidden;
-  padding-bottom: 28rem;
+  border-bottom: 5px solid var(--mantine-color-brand-5);
 }
 
 .textoverlay {
@@ -21,12 +20,10 @@
 
 @media (max-width: em(800px)) {
   .root {
-
-
   }
   .textoverlay {
     left: var(--mantine-spacing-xl);
     font-size: 10rem;
-    bottom:0;
+    bottom: 0;
   }
 }

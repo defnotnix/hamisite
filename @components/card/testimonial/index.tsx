@@ -26,10 +26,10 @@ export function CardTestimonial({ data }: { data: any }) {
       >
         <Quotes weight="fill" />
 
-        <Space h="100" />
+        <Space h="32" />
 
-        <Text size="1.3rem" lh="2rem">
-          -
+        <Text size="sm">
+       {data.testimonial}
         </Text>
 
         <Space h="xl" />

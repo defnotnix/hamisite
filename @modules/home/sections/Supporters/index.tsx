@@ -11,6 +11,7 @@ import {
   Image,
   Paper,
   SimpleGrid,
+  Space,
   Text,
   Title,
   useMantineTheme,
@@ -177,13 +178,15 @@ export function SectionHomeSupporters() {
           slideSize={{ base: "20%", lg: "14.285%" }}
           align={"start"}
           plugins={[autoplay3.current]}
+          onMouseEnter={autoplay3.current.stop}
+          onMouseLeave={autoplay3.current.play}
         >
           {dataSupporters.slice(0, 10).map((supdata: any, index: number) => (
             <Carousel.Slide key={index}>
               <AnimateDiv.Row>
                 <Link href={supdata.url}>
                   <Image
-                    my="xs"
+                    p="xl"
                     style={{
                       filter: supdata.invert ? "invert(100%)" : "",
 
@@ -203,13 +206,15 @@ export function SectionHomeSupporters() {
           slideSize={{ base: "20%", lg: "16.66%" }}
           align={"start"}
           plugins={[autoplay.current]}
+          onMouseEnter={autoplay.current.stop}
+          onMouseLeave={autoplay.current.play}
         >
           {dataSupporters.slice(10, 20).map((supdata: any, index: number) => (
             <Carousel.Slide key={index}>
               <AnimateDiv.Row>
                 <Link href={supdata.url}>
                   <Image
-                    my="xs"
+                    p="xl"
                     style={{
                       filter: supdata.invert ? "invert(100%)" : "",
 
