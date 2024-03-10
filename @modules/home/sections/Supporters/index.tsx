@@ -114,6 +114,7 @@ export function SectionHomeSupporters() {
         }}
       >
         <Paper
+          visibleFrom="lg"
           h={600}
           style={{
             position: "absolute",
@@ -148,7 +149,7 @@ export function SectionHomeSupporters() {
           ))}
         </Carousel>
       </Container>
-      <Title size="1.6rem" ta="center" my="100">
+      <Title size="1.6rem" ta="center" my={{ base: 48, lg: "100" }}>
         BRANDS THAT SUPPORT US
       </Title>
 
@@ -159,6 +160,7 @@ export function SectionHomeSupporters() {
         }}
       >
         <Paper
+          visibleFrom="lg"
           h={600}
           style={{
             position: "absolute",
@@ -186,7 +188,7 @@ export function SectionHomeSupporters() {
               <AnimateDiv.Row>
                 <Link href={supdata.url}>
                   <Image
-                    p="xl"
+                    p={{ base: 0, lg: "xl" }}
                     style={{
                       filter: supdata.invert ? "invert(100%)" : "",
 
@@ -214,7 +216,7 @@ export function SectionHomeSupporters() {
               <AnimateDiv.Row>
                 <Link href={supdata.url}>
                   <Image
-                    p="xl"
+                    p={{ base: 0, lg: "xl" }}
                     style={{
                       filter: supdata.invert ? "invert(100%)" : "",
 

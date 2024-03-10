@@ -116,7 +116,44 @@ export function LayoutSiteHeader() {
       transition={{ type: "tween" }}
     >
       {state.current == "home" ? (
+      <>
         <Group
+        hiddenFrom="lg"
+          justify="center"
+          style={{
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            handlersDrawerNav.toggle();
+          }}
+        >
+          <Text
+            size="xs"
+            style={{
+              color: "rgba(255,255,255,.3)",
+            }}
+          >
+            <span
+              style={{
+                color: theme.colors.brand[5],
+                textTransform: "uppercase",
+              }}
+            >
+              {state.current}
+            </span>
+            <span
+              onClick={() => {
+                if (Pathname !== "/") {
+                  handleNavClick("/", "Home");
+                }
+              }}
+            >
+              / HAMI NEPAL
+            </span>
+          </Text>
+        </Group>
+        <Group
+        visibleFrom="lg"
           justify="center"
           style={{
             cursor: "pointer",
@@ -150,9 +187,39 @@ export function LayoutSiteHeader() {
             </span>
           </Text>
         </Group>
+        </>
       ) : (
         <Group justify="center">
           <Text
+          hiddenFrom="lg"
+            size="xs"
+            style={{
+              color: "rgba(255,255,255,.3)",
+              cursor: "pointer",
+            }}
+          >
+            <span
+              className={classes.breadhome}
+              onClick={() => {
+                if (Pathname !== "/") {
+                  handleNavClick("/", "Home");
+                }
+              }}
+            >
+              HAMI NEPAL
+            </span>{" "}
+            /{" "}
+            <span
+              style={{
+                color: theme.colors.brand[5],
+                textTransform: "uppercase",
+              }}
+            >
+              {state.current}
+            </span>
+          </Text>
+          <Text
+          visibleFrom="lg"
             size="xs"
             style={{
               color: "rgba(255,255,255,.3)",

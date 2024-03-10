@@ -24,13 +24,14 @@ export function CardTestimonial({ data }: { data: any }) {
         }}
         radius="lg"
       >
-        <Quotes weight="fill" />
+        <Group justify="space-between" align="flex-start">
+          <Avatar size="xl" src={data.image} />
+          <Quotes weight="fill" size={32} />
+        </Group>
 
         <Space h="32" />
 
-        <Text size="sm">
-       {data.testimonial}
-        </Text>
+        <Text size="sm">{data.testimonial}</Text>
 
         <Space h="xl" />
 
@@ -73,9 +74,7 @@ export function CardTestimonial({ data }: { data: any }) {
             </Group>
           </Grid.Col>
           <Grid.Col span={4}>
-            <Group justify="flex-end">
-              <Avatar size="lg" src={data.image} />
-            </Group>
+            <Group justify="flex-end"></Group>
           </Grid.Col>
         </Grid>
       </Paper>

@@ -22,7 +22,7 @@ export function ModuleAbout() {
       {/* <S.Showreel /> */}
       <S.Info />
       <S.Mentor />
-      <SectionHome.Supporters />
+      <SectionHome.Supporters />x
     </>
   );
 }
