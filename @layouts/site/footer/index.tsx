@@ -190,8 +190,6 @@ export function LayoutSiteFooter() {
             </Group>
           </Group>
         </Container>
-
-        {/* <div className={classes.textoverlay}>हामी नेपाल</div> */}
       </section>
     </>
   );
