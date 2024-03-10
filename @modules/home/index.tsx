@@ -22,6 +22,8 @@ import { ContextPageProp } from "@/@context/PageProp";
 import { SectionHome } from "./sections";
 import { AnimateDiv } from "@/@animate/div";
 
+import imgHN from "@/@assets/hn.png";
+
 export function ModuleHome() {
   // * DEFINITIONS
 
@@ -48,36 +50,10 @@ export function ModuleHome() {
     <>
       <SectionHome.Hero />
 
+      <Space mt={160} />
+
       <AnimateDiv.Row>
-       <>
-       <Text
-          visibleFrom="lg"
-          ta="center"
-          style={{
-            opacity: 0.8,
-            // bottom: "-15rem",
-            left: "10rem",
-            fontSize: "23em",
-            fontWeight: 900,
-            color: "var(--mantine-color-brand-5)",
-          }}
-        >
-          हामी नेपाल
-        </Text>
-        <Text
-          hiddenFrom="lg"
-          ta="center"
-          style={{
-            opacity: 0.8,
-            // bottom: "-15rem",
-            left: "10rem",
-            fontSize: "7em",
-            fontWeight: 900,
-            color: "var(--mantine-color-brand-5)",
-          }}
-        >
-          हामी नेपाल
-        </Text></>
+        <Image src={imgHN.src} w={"100vw"} />
       </AnimateDiv.Row>
 
       <SectionHome.ImpactMap />
@@ -92,3 +68,5 @@ export function ModuleHome() {
     </>
   );
 }
+
+// 1920 * 1080
