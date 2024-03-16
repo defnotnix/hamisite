@@ -13,13 +13,29 @@ import imgSmriti from "@/@assets/img/volunteer/kathmandu/Smita Parajuli.jpg";
 import imgSpain from "@/@assets/img/volunteer/kathmandu/Spain Magar.jpg";
 import imgSmita from "@/@assets/img/volunteer/kathmandu/Smita Parajuli.jpg";
 import imgYanzee from "@/@assets/img/volunteer/kathmandu/Yeshi.jpg";
+import imgManavi from "@/@assets/img/volunteer/kathmandu/Manavi.jpg";
 
 // Nepal Gunj
 import imgJyoti from "@/@assets/img/volunteer/ngj/jyoti.jpg";
 import imgBhawana from "@/@assets/img/volunteer/ngj/Bhawana Thapa.jpg";
 import imgAshesh from "@/@assets/img/volunteer/ngj/Ashesh.jpg";
+import imgSabin from "@/@assets/img/volunteer/ngj/Sabin.png";
 
-export const dataTeam = [
+//dharan
+import imgAnusha from "@/@assets/img/volunteer/dharan/Anusha Tamang.jpg";
+import imgArjun from "@/@assets/img/volunteer/dharan/Arjun Dahal.jpg";
+import imgGrishma from "@/@assets/img/volunteer/dharan/Grishma Bhattarai.jpg";
+import imgPrashant from "@/@assets/img/volunteer/dharan/Prashant Limbu.jpg";
+import imgRikesh from "@/@assets/img/volunteer/dharan/Rikesh Bhujel.jpg";
+import imgRupesh from "@/@assets/img/volunteer/dharan/Rupesh Libang.jpg";
+
+//pokhara
+import imgArpana from "@/@assets/img/volunteer/pokhara/Arpana (1).jpg";
+import imgAshma from "@/@assets/img/volunteer/pokhara/Ashma Nepal.jpg";
+import imgSuresh from "@/@assets/img/volunteer/pokhara/Suresh Subedi.jpg";
+import imgPratik from "@/@assets/img/volunteer/pokhara/pratik timilsina.jpg";
+
+const teamKathmandu = [
   {
     name: "Aakash Man Tuladhar",
     address: "Sunakothi - Lalitpur",
@@ -195,6 +211,7 @@ export const dataTeam = [
     blood_type: "O +ve",
     status: "Inactive",
     location: "Kathmandu",
+    image: imgJyoti.src,
   },
   {
     name: "Kabita Shrestha",
@@ -258,6 +275,7 @@ export const dataTeam = [
     blood_type: "B +ve",
     status: "Active",
     location: "Kathmandu",
+    image: imgManavi.src,
   },
   {
     name: "Manshu Maharjan",
@@ -432,6 +450,7 @@ export const dataTeam = [
     blood_type: "A +ve",
     status: "Active",
     location: "Kathmandu",
+    image: imgSpain.src,
   },
   {
     name: "Sudan Gurung",
@@ -451,6 +470,7 @@ export const dataTeam = [
     blood_type: "O +ve",
     status: "Active",
     location: "Kathmandu",
+    image: imgSuraj.src,
   },
   {
     name: "Susham Bajracharya",
@@ -479,6 +499,147 @@ export const dataTeam = [
     status: "Inactive",
     location: "Kathmandu",
   },
+];
+
+export const teamPokhara = [
+  {
+    name: "Ashma Nepal",
+    address: "Khapaudi, lakeside",
+    phone: "9814109163",
+    email: "ashmanepal321@gmail.com",
+    blood_type: "",
+    status: "Active",
+    location: "Pokhara",
+    image: imgAshma.src,
+  },
+  {
+    name: "Suresh Subedi",
+    address: "Damside",
+    phone: "9846784946",
+    email: "Replysureshsubedu@gmail.com",
+    blood_type: "O+",
+    status: "Active",
+    location: "Pokhara",
+    image: imgSuresh.src,
+  },
+  {
+    name: "Pratik Timilsina",
+    address: "Hospital chowk",
+    phone: "9802803469",
+    email: "Pratiktimilsina@gmail.com",
+    blood_type: "",
+    status: "Active",
+    location: "Pokhara",
+    image: imgPratik,
+  },
+  {
+    name: "Tshela Gurung",
+    address: "Lakeside",
+    phone: "9827163633",
+    email: "tshelagrg99@gmail.com",
+    blood_type: "",
+    status: "Active",
+    location: "Pokhara",
+  },
+];
+
+export const teamDharan = [
+  {
+    name: "Nabin Rai",
+    location: "Dharan",
+    phone: "9819098035",
+    email: "raiinaveen7272@gmail.com",
+    bloodType: "A +ve",
+    status: "Active",
+  },
+  {
+    name: "Raju Gajmer",
+    location: "Dharan",
+    phone: "9702521063",
+    email: "raju.un.bhm@gmail.com",
+    bloodType: "A +ve",
+    status: "Active",
+  },
+  {
+    name: "Arjun Dahal",
+    location: "Dharan",
+    phone: "9852062618",
+    email: "arjunofficial2060@gmail.com",
+    bloodType: "AB +ve",
+    status: "Active",
+    image: imgArjun.src,
+  },
+  {
+    name: "Prashant Limbu",
+    location: "Dharan",
+    phone: "9805306562",
+    email: "limbuprashant705@gmail.com",
+    bloodType: "A +ve",
+    status: "Active",
+    image: imgPrashant.src,
+  },
+  {
+    name: "Grishma Bhattarai",
+    location: "Dharan",
+    phone: "9815394455",
+    email: "alvinabattarai143@gmail.com",
+    bloodType: "A +ve",
+    status: "Active",
+    image: imgGrishma.src,
+  },
+  {
+    name: "Anusha Tamang",
+    location: "Dharan",
+    phone: "9825382265",
+    email: "anushatamang5029683@gmail.com",
+    bloodType: "A +ve",
+    status: "Active",
+    image: imgAnusha.src,
+  },
+  {
+    name: "Iman Limbu",
+    location: "Dharan",
+    phone: "9810444905",
+    email: "imanlimbu48@gmail.com",
+    bloodType: "B +ve",
+    status: "Active",
+  },
+  {
+    name: "Rikesh Bhujel",
+    location: "Dharan",
+    phone: "9829361480",
+    email: "",
+    bloodType: "O +ve",
+    status: "Active",
+    image: imgRikesh.src,
+  },
+  {
+    name: "Rewan Tuladhar",
+    location: "Dharan",
+    phone: "9812317502",
+    email: "rewantuladhar@gmail.com",
+    bloodType: "B +ve",
+    status: "Active",
+  },
+  {
+    name: "Anisha Rai",
+    location: "Dharan",
+    phone: "9800965714",
+    email: "teriyanar@gmail.com",
+    bloodType: "-",
+    status: "Active",
+  },
+  {
+    name: "Ujwal Shrestha",
+    location: "Dharan",
+    phone: "9819082254",
+    email: "shresthaujwal1067@gmail.com",
+    bloodType: "A +ve",
+    status: "Active",
+  },
+];
+
+const teamNkj = [
   {
     name: "Ashesh Shah",
     location: "Nepalgunj",
@@ -513,93 +674,13 @@ export const dataTeam = [
     email: "lamasabin796@gmail.com",
     bloodType: "A +ve",
     status: "Active",
+    image: imgSabin.src,
   },
-  {
-    name: "Nabin Rai",
-    location: "Dharan",
-    phone: "9819098035",
-    email: "raiinaveen7272@gmail.com",
-    bloodType: "A +ve",
-    status: "Active",
-  },
-  {
-    name: "Raju Gajmer",
-    location: "Dharan",
-    phone: "9702521063",
-    email: "raju.un.bhm@gmail.com",
-    bloodType: "A +ve",
-    status: "Active",
-  },
-  {
-    name: "Arjun Dahal",
-    location: "Dharan",
-    phone: "9852062618",
-    email: "arjunofficial2060@gmail.com",
-    bloodType: "AB +ve",
-    status: "Active",
-  },
-  {
-    name: "Prashant Limbu",
-    location: "Dharan",
-    phone: "9805306562",
-    email: "limbuprashant705@gmail.com",
-    bloodType: "A +ve",
-    status: "Active",
-  },
-  {
-    name: "Grishma Bhattarai",
-    location: "Dharan",
-    phone: "9815394455",
-    email: "alvinabattarai143@gmail.com",
-    bloodType: "A +ve",
-    status: "Active",
-  },
-  {
-    name: "Anusha Tamang",
-    location: "Dharan",
-    phone: "9825382265",
-    email: "anushatamang5029683@gmail.com",
-    bloodType: "A +ve",
-    status: "Active",
-  },
-  {
-    name: "Iman Limbu",
-    location: "Dharan",
-    phone: "9810444905",
-    email: "imanlimbu48@gmail.com",
-    bloodType: "B +ve",
-    status: "Active",
-  },
-  {
-    name: "Rikesh Bhujel",
-    location: "Dharan",
-    phone: "9829361480",
-    email: "",
-    bloodType: "O +ve",
-    status: "Active",
-  },
-  {
-    name: "Rewan Tuladhar",
-    location: "Dharan",
-    phone: "9812317502",
-    email: "rewantuladhar@gmail.com",
-    bloodType: "B +ve",
-    status: "Active",
-  },
-  {
-    name: "Anisha Rai",
-    location: "Dharan",
-    phone: "9800965714",
-    email: "teriyanar@gmail.com",
-    bloodType: "-",
-    status: "Active",
-  },
-  {
-    name: "Ujwal Shrestha",
-    location: "Dharan",
-    phone: "9819082254",
-    email: "shresthaujwal1067@gmail.com",
-    bloodType: "A +ve",
-    status: "Active",
-  },
+];
+
+export const dataTeam = [
+  ...teamKathmandu,
+  ...teamPokhara,
+  ...teamDharan,
+  ...teamNkj,
 ];
