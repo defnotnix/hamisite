@@ -50,10 +50,16 @@ export function ModuleHome() {
     <>
       <SectionHome.Hero />
 
-      <Space mt={160} />
+      <Space mt={{ base: 48, lg: 160 }} />
 
       <AnimateDiv.Row>
-        <Image src={imgHN.src} w={"100vw"} />
+        <Image
+          src={imgHN.src}
+          w={{
+            lg: "100vw",
+          }}
+          h={{ base: 160, lg: "auto" }}
+        />
       </AnimateDiv.Row>
 
       <SectionHome.ImpactMap />

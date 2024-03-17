@@ -14,6 +14,7 @@ import {
   Grid,
   Group,
   Image,
+  Menu,
   Modal,
   Stack,
   Text,
@@ -116,82 +117,82 @@ export function LayoutSiteHeader() {
       transition={{ type: "tween" }}
     >
       {state.current == "home" ? (
-      <>
-        <Group
-        hiddenFrom="lg"
-          justify="center"
-          style={{
-            cursor: "pointer",
-          }}
-          onClick={() => {
-            handlersDrawerNav.toggle();
-          }}
-        >
-          <Text
-            size="xs"
+        <>
+          <Group
+            hiddenFrom="lg"
+            justify="center"
             style={{
-              color: "rgba(255,255,255,.3)",
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              handlersDrawerNav.toggle();
             }}
           >
-            <span
+            <Text
+              size="xs"
               style={{
-                color: theme.colors.brand[5],
-                textTransform: "uppercase",
+                color: "rgba(255,255,255,.3)",
               }}
             >
-              {state.current}
-            </span>
-            <span
-              onClick={() => {
-                if (Pathname !== "/") {
-                  handleNavClick("/", "Home");
-                }
-              }}
-            >
-              / HAMI NEPAL
-            </span>
-          </Text>
-        </Group>
-        <Group
-        visibleFrom="lg"
-          justify="center"
-          style={{
-            cursor: "pointer",
-          }}
-          onClick={() => {
-            handlersNav.toggle();
-          }}
-        >
-          <Text
-            size="xs"
+              <span
+                style={{
+                  color: theme.colors.brand[5],
+                  textTransform: "uppercase",
+                }}
+              >
+                {state.current}
+              </span>
+              <span
+                onClick={() => {
+                  if (Pathname !== "/") {
+                    handleNavClick("/", "Home");
+                  }
+                }}
+              >
+                / HAMI NEPAL
+              </span>
+            </Text>
+          </Group>
+          <Group
+            visibleFrom="lg"
+            justify="center"
             style={{
-              color: "rgba(255,255,255,.3)",
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              handlersNav.toggle();
             }}
           >
-            <span
+            <Text
+              size="xs"
               style={{
-                color: theme.colors.brand[5],
-                textTransform: "uppercase",
+                color: "rgba(255,255,255,.3)",
               }}
             >
-              {state.current}
-            </span>
-            <span
-              onClick={() => {
-                if (Pathname !== "/") {
-                  handleNavClick("/", "Home");
-                }
-              }}
-            >
-              / HAMI NEPAL
-            </span>
-          </Text>
-        </Group>
+              <span
+                style={{
+                  color: theme.colors.brand[5],
+                  textTransform: "uppercase",
+                }}
+              >
+                {state.current}
+              </span>
+              <span
+                onClick={() => {
+                  if (Pathname !== "/") {
+                    handleNavClick("/", "Home");
+                  }
+                }}
+              >
+                / HAMI NEPAL
+              </span>
+            </Text>
+          </Group>
         </>
       ) : (
         <Group justify="center">
           <Text
-          hiddenFrom="lg"
+            hiddenFrom="lg"
             size="xs"
             style={{
               color: "rgba(255,255,255,.3)",
@@ -219,7 +220,7 @@ export function LayoutSiteHeader() {
             </span>
           </Text>
           <Text
-          visibleFrom="lg"
+            visibleFrom="lg"
             size="xs"
             style={{
               color: "rgba(255,255,255,.3)",
@@ -392,14 +393,68 @@ export function LayoutSiteHeader() {
                     visibleFrom="md"
                   />
 
-                  <Burger
-                    opened={openedNav}
-                    onClick={() => {
-                      handlersDrawerNav.toggle();
-                    }}
-                    size={14}
-                    hiddenFrom="md"
-                  />
+                  <Menu withArrow position="bottom-end">
+                    <Menu.Target>
+                      <Burger
+                        opened={openedNav}
+                        onClick={() => {
+                          handlersDrawerNav.toggle();
+                        }}
+                        size={14}
+                        hiddenFrom="md"
+                      />
+                    </Menu.Target>
+                    <Menu.Dropdown w={200}>
+                      <Menu.Label>
+                        <Text size="xs" opacity={0.5}>
+                          Navigation
+                        </Text>
+                      </Menu.Label>
+                      {configNavPage.map((navitem: any, index: number) => (
+                        <Menu.Item
+                          className={cx(classes.navitem, {
+                            [classes.navitem_active]: Pathname == navitem.url,
+                          })}
+                          onClick={() => {
+                            handleNavClick(navitem.url, navitem.label);
+                          }}
+                        >
+                          <Text key={index} size="xs">
+                            {navitem.label}
+                          </Text>
+                        </Menu.Item>
+                      ))}
+                      <Menu.Divider />
+                      <Menu.Item
+                        onClick={() => {
+                          handleNavClick("signin", "Register");
+                        }}
+                      >
+                        <Text size="xs">
+                          SIGN IN{" "}
+                          <span
+                            style={{
+                              opacity: 0.5,
+                            }}
+                          >
+                            / REGISTER
+                          </span>
+                        </Text>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <Button
+                          style={{
+                            width: "100%",
+                          }}
+                          size="sm"
+                          onClick={handlersDonate.open}
+                          leftSection={<Heartbeat />}
+                        >
+                          <Text size="xs">Donate</Text>
+                        </Button>
+                      </Menu.Item>
+                    </Menu.Dropdown>
+                  </Menu>
                 </Group>
               </Grid.Col>
             </Grid>
@@ -407,13 +462,20 @@ export function LayoutSiteHeader() {
         </motion.div>
       </header>
 
-      <Drawer
+      {/* <Drawer
         opened={openDrawerNav}
         onClose={handlersDrawerNav.close}
+        position="top"
+        //h={400}
+        styles={{
+          header: {
+            padding: "var(--mantine-spacing-xl)",
+          },
+        }}
         title={
           <Image
-            height={18}
-            width={18}
+            height={24}
+            width={24}
             fit="contain"
             src={imgLogo.src}
             style={{
@@ -422,7 +484,7 @@ export function LayoutSiteHeader() {
           />
         }
       >
-        <Stack justify="center" mt="xl">
+        <Stack justify="center" mt="xl" gap="xs">
           {configNavPage.map((navitem: any, index: number) => (
             <Text
               onClick={() => {
@@ -434,13 +496,13 @@ export function LayoutSiteHeader() {
               })}
               tt="none"
               ta="center"
-              size="3rem"
+              size="xl"
             >
               {navitem.label}
             </Text>
           ))}
         </Stack>
-      </Drawer>
+      </Drawer> */}
 
       <Modal
         title={

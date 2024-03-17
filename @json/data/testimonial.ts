@@ -98,7 +98,7 @@ export const influencerTestimonials = [
     testimonial: `Paramita Rajya Laxmi Rana, a versatile figure in Nepal's entertainment industry as an actress, model, singer, and makeup artist, emerged as a steadfast supporter of Hami Nepal following the "Enough is Enough" campaign and Hunger Strike. Her solidarity was evident in her support for President Sudan Gurung during the "Satyagraha" Hunger Strike, offering moral backing to the cause. Since then, Rana has remained dedicated to our mission, consistently sharing our content and updates with her extensive social media following, amplifying our reach and impact.`,
     title: "Singer, Model",
     image:
-      "https://media.licdn.com/dms/image/C5603AQEl509Xyjbs-g/profile-displayphoto-shrink_800_800/0/1618586451459?e=2147483647&v=beta&t=7CNTOf8D0x-MDT9Nv2PztcuYPnFsq1UNVnWf9jQZWts",
+      "https://i.pinimg.com/736x/ae/59/9f/ae599f5334e5688647bdcf0b07c3814e.jpg",
     instagram: "paramita2.0",
     facebook: "OfficialParamitaRana",
   },
@@ -109,7 +109,7 @@ export const influencerTestimonials = [
     `,
     title: "Makeup Artist, Influencer",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/3/3f/Paramita_RL_Rana_Pam.jpg",
+      "https://media.licdn.com/dms/image/C5603AQEl509Xyjbs-g/profile-displayphoto-shrink_800_800/0/1618586451459?e=2147483647&v=beta&t=7CNTOf8D0x-MDT9Nv2PztcuYPnFsq1UNVnWf9jQZWts",
     instagram: "___lemii___",
   },
 

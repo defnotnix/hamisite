@@ -8,7 +8,7 @@
 }
 
 .navitem {
-  color: var(--mantine-color-gray-7);
+  color: var(--mantine-color-gray-6);
   text-transform: uppercase;
   transition: 0.1s ease-in-out;
   cursor: pointer;
