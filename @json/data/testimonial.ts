@@ -170,7 +170,7 @@ export const influencerTestimonials = [
     `,
     title: "Youtuber, Makeup Artist",
     image: "https://elenagurung.com/assets/img/profile-img.jpg",
-    instagram: "elenadon2",
+    instagram: "Elenadon_",
     facebook: "elenadon_",
   },
   {
