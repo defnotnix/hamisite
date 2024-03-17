@@ -19,6 +19,7 @@ import img18 from "@/@assets/brands/f18.png";
 import img19 from "@/@assets/brands/f19.png";
 import img20 from "@/@assets/brands/f20.png";
 import img21 from "@/@assets/brands/f21.png";
+import img211 from "@/@assets/brands/f211.png";
 // import img22 from "@/@assets/brands/f22.png";
 // import img23 from "@/@assets/brands/f23.png";
 // import img24 from "@/@assets/brands/f24.png";
@@ -27,6 +28,15 @@ import img21 from "@/@assets/brands/f21.png";
 // import img27 from "@/@assets/brands/f27.png";
 // import img28 from "@/@assets/brands/f28.png";
 // import img29 from "@/@assets/brands/f29.png";
+
+import imgBarbara from "@/@assets/brands/barbara.png";
+import img22 from "@/@assets/brands/f21-2.png";
+import img23 from "@/@assets/brands/f21-3.png";
+import img24 from "@/@assets/brands/f21-4.png";
+import img25 from "@/@assets/brands/f21-5.png";
+import img26 from "@/@assets/brands/f21-6.png";
+import img27 from "@/@assets/brands/f21-7.png";
+import img28 from "@/@assets/brands/f21-8.png";
 
 export const dataSupporters = [
   {
@@ -133,43 +143,39 @@ export const dataSupporters = [
   //   url: "https://bnl.com.np/",
   // },
   {
-    name: "Hotel Ambassador",
-    url: "https://bnl.com.np/",
+    url: "https://www.ambassadornepal.com/",
+    img: img211.src,
   },
   {
-    name: "Child Reach Nepal",
-    url: "https://bnl.com.np/",
+    url: "http://barbarafoundation.org/",
+    img: imgBarbara.src,
   },
   {
-    name: "Dharma Adventures",
-    url: "https://bnl.com.np/",
+    url: "#",
+    img: img22.src,
   },
   {
-    name: "Coca-Cola Beverage Nepal",
-    url: "https://bnl.com.np/",
+    url: "https://www.timepharma.com/",
+    img: img23.src,
   },
   {
-    name: "Joy Foundation Nepal",
-    url: "https://bnl.com.np/",
+    url: "https://studentsforafreetibet.org/",
+    img: img24.src,
   },
   {
-    name: "Campion School",
-    url: "https://bnl.com.np/",
+    url: "https://projectsarangi.com/",
+    img: img25.src,
   },
   {
-    name: "KTM Express Group",
-    url: "https://bnl.com.np/",
+    url: "https://www.gwt.org.uk/",
+    img: img26.src,
   },
   {
-    name: "Japan Asian Friendship Society",
-    url: "https://bnl.com.np/",
+    url: "https://www.instagram.com/rbkproductionsnepal/",
+    img: img27.src,
   },
   {
-    name: "Pad 2 Go",
-    url: "https://bnl.com.np/",
-  },
-  {
-    name: "Shree Airlines",
-    url: "https://bnl.com.np/",
+    url: "https://www.aljazeera.com/",
+    img: img28.src,
   },
 ];

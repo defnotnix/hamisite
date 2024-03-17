@@ -220,8 +220,8 @@ export function SectionInfo() {
                     lineHeight: "1.8rem",
                   }}
                 >
-                  n the aftermath of the earthquake, chaos engulfed hospitals in
-                  Kathmandu, including the National Trauma Center, which,
+                  In the aftermath of the earthquake, chaos engulfed hospitals
+                  in Kathmandu, including the National Trauma Center, which,
                   despite being open, struggled to function effectively.
                   Witnessing the dire situation firsthand, our organization's
                   founder, Mr. Sudan Gurung, though not from a social-work

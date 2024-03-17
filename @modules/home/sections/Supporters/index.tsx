@@ -33,6 +33,7 @@ export function SectionHomeSupporters() {
   const autoplay = useRef(AutoScroll({ speed: 0.6, direction: "backward" }));
   const autoplay2 = useRef(AutoScroll({ speed: 0.6 }));
   const autoplay3 = useRef(AutoScroll({ speed: 0.6 }));
+  const autoplay5 = useRef(AutoScroll({ speed: 0.6 }));
 
   const autoplay4 = useRef(AutoScroll({ speed: 0.3 }));
 
@@ -212,6 +213,34 @@ export function SectionHomeSupporters() {
           onMouseLeave={autoplay.current.play}
         >
           {dataSupporters.slice(10, 20).map((supdata: any, index: number) => (
+            <Carousel.Slide key={index}>
+              <AnimateDiv.Row>
+                <Link href={supdata.url}>
+                  <Image
+                    p={{ base: 0, lg: "xl" }}
+                    style={{
+                      filter: supdata.invert ? "invert(100%)" : "",
+
+                      objectFit: "contain",
+                    }}
+                    src={supdata.img}
+                  />
+                </Link>
+              </AnimateDiv.Row>
+            </Carousel.Slide>
+          ))}
+        </Carousel>
+        <Carousel
+          loop={true}
+          withIndicators={false}
+          withControls={false}
+          slideSize={{ base: "20%", lg: "16.66%" }}
+          align={"start"}
+          plugins={[autoplay5.current]}
+          onMouseEnter={autoplay5.current.stop}
+          onMouseLeave={autoplay5.current.play}
+        >
+          {dataSupporters.slice(20, 30).map((supdata: any, index: number) => (
             <Carousel.Slide key={index}>
               <AnimateDiv.Row>
                 <Link href={supdata.url}>
