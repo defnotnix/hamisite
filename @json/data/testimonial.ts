@@ -114,7 +114,7 @@ export const influencerTestimonials = [
   },
 
   {
-    name: "Jyotsna Rana",
+    name: "Jyotsna Yogi",
     testimonial: `Jyotsna Yogi is a model, actor, and TV personality. She is the brand ambassador to sajilopay and the Goodwill Ambassador to Project Humane Nepal.' Hami Nepal has received a donation of medications from her. During the development of the plasma bank, she also aided Hami Nepal with its awareness campaign. She also made contact with COVID-recovered patients who may provide plasma and prepared educational videos on discrimination. She also assisted in the dissemination of information through her social media platforms on occasion. Since early 2020, she has been actively involved with Hami Nepal in raising awareness and sharing our fund-raising campaigns.`,
     title: "Actor, Model",
     image:
