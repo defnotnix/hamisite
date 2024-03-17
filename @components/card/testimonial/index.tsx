@@ -53,7 +53,7 @@ export function CardTestimonial({ data }: { data: any }) {
                   {data.title}
                 </Text>
                 <Group gap="4" mt="xs">
-                  <Tooltip color="dark" label={data.title + "'s Instagram"}>
+                  <Tooltip color="dark" label={data.name + "'s Instagram"}>
                     <Link href={"https://www.instagram.com/" + data.instagram}>
                       <ActionIcon size="xs" variant="light" color="orange">
                         <IconBrandInstagram />

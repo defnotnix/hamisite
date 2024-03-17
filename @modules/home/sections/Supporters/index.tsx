@@ -97,7 +97,7 @@ export function SectionHomeSupporters() {
 
   return (
     <>
-      {/* <Container size="xl" py={{ base: "xl", lg: 100 }}>
+      <Container size="xl" py={{ base: "xl", lg: 100 }}>
         <Group gap="xs" justify="center">
           <Text size="xs" opacity={0.3}>
             SUPPORTERS
@@ -149,7 +149,7 @@ export function SectionHomeSupporters() {
             </Carousel.Slide>
           ))}
         </Carousel>
-      </Container> */}
+      </Container>
       <Title size="1.6rem" ta="center" my={{ base: 48, lg: "100" }}>
         BRANDS THAT SUPPORT US
       </Title>
