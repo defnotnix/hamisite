@@ -211,7 +211,7 @@ const teamKathmandu = [
     blood_type: "O +ve",
     status: "Inactive",
     location: "Kathmandu",
-    image: imgJyoti.src,
+    // image: imgJyoti.src,
   },
   {
     name: "Kabita Shrestha",
