@@ -1,6 +1,6 @@
 import imgAnil from "@/@assets/img/volunteer/kathmandu/Anil Dai.jpg";
 import imgAnjali from "@/@assets/img/volunteer/kathmandu/Anjal Dai.jpg";
-import imgApson from "@/@assets/img/volunteer/kathmandu/apson2.jpg";
+import imgApson from "@/@assets/img/volunteer/kathmandu/apson.png";
 import imgAshwin from "@/@assets/img/volunteer/kathmandu/Ashwin Khadgi.jpg";
 import Bibika from "@/@assets/img/volunteer/kathmandu/Bibika Koirala.jpg";
 import imgJenish from "@/@assets/img/volunteer/kathmandu/Jenis (1).jpg";
