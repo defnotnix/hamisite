@@ -153,18 +153,6 @@ export function SectionMentor() {
                 <AnimateDiv.Row>
                   <Image src={imgManita.src} mb={{ base: "xl", lg: 0 }} />
                 </AnimateDiv.Row>
-                <AnimateDiv.Row>
-                  {/* <Blockquote
-                    mt="md"
-                    color="brand"
-                    style={{
-                      background: theme.colors.dark[9],
-                    }}
-                    p="xl"
-                  >
-                  Miss Universe Nepal 2018
-                  </Blockquote> */}
-                </AnimateDiv.Row>
               </AnimateDiv.Container>
             </Grid.Col>
             <Grid.Col span={{ base: 12, lg: 6 }}>
