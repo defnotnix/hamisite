@@ -1,0 +1,25 @@
+.tab {
+  opacity: 0.5;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.tab svg {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.tab:hover {
+  opacity: 1;
+}
+
+.active {
+  opacity: 1;
+  border-bottom: 2px solid var(--mantine-color-brand-5);
+}
+
+.active svg {
+  opacity: 1;
+  color: var(--mantine-color-brand-5);
+}

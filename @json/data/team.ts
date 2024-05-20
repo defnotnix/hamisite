@@ -1,4 +1,5 @@
 import imgAnil from "@/@assets/img/volunteer/kathmandu/Anil Dai.jpg";
+import imgAnjal from "@/@assets/img/volunteer/kathmandu/Anjal Dai.jpg";
 import imgAnjali from "@/@assets/img/volunteer/kathmandu/Anjal Dai.jpg";
 import imgApson from "@/@assets/img/volunteer/kathmandu/apson.png";
 import imgAshwin from "@/@assets/img/volunteer/kathmandu/Ashwin Khadgi.jpg";
@@ -14,6 +15,7 @@ import imgSpain from "@/@assets/img/volunteer/kathmandu/Spain Magar.jpg";
 import imgSmita from "@/@assets/img/volunteer/kathmandu/Smita Parajuli.jpg";
 import imgYanzee from "@/@assets/img/volunteer/kathmandu/Yeshi.jpg";
 import imgManavi from "@/@assets/img/volunteer/kathmandu/Manavi.jpg";
+import imgKushal from "@/@assets/img/volunteer/kathmandu/Kushal.jpg";
 
 // Nepal Gunj
 import imgJyoti from "@/@assets/img/volunteer/ngj/jyoti.jpg";
@@ -81,6 +83,7 @@ const teamKathmandu = [
     blood_type: "B +ve",
     status: "Active",
     location: "Kathmandu",
+    image: imgAnjal.src,
   },
   {
     name: "Apson G.C.",
@@ -230,6 +233,7 @@ const teamKathmandu = [
     blood_type: "O +ve",
     status: "Active",
     location: "Kathmandu",
+    image: imgKushal.src,
   },
   {
     name: "Luja Dangol",
@@ -530,7 +534,7 @@ export const teamPokhara = [
     blood_type: "",
     status: "Active",
     location: "Pokhara",
-    image: imgPratik,
+    image: imgPratik.src,
   },
   {
     name: "Tshela Gurung",
@@ -635,6 +639,23 @@ export const teamDharan = [
     phone: "9819082254",
     email: "shresthaujwal1067@gmail.com",
     bloodType: "A +ve",
+    status: "Active",
+  },
+  {
+    name: "Rupesh Libang",
+    location: "Dharan-17",
+    phone: "9811350782",
+    email: "rupeshlibang02@gmail.com",
+    bloodType: "B+",
+    status: "Active",
+    image: imgRupesh.src,
+  },
+  {
+    name: "Smriti Bantawa Rai",
+    location: "Dharan-10",
+    phone: "9811345896",
+    email: "smritir395@gmail.com",
+    bloodType: "",
     status: "Active",
   },
 ];

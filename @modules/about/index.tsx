@@ -22,6 +22,7 @@ export function ModuleAbout() {
       {/* <S.Showreel /> */}
       <S.Info />
       <S.Mentor />
+      {/* <S.Ambassador /> */}
       <SectionHome.Supporters />x
     </>
   );
