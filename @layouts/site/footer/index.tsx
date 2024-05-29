@@ -147,7 +147,7 @@ export function LayoutSiteFooter() {
                     <ActionIcon
                       variant="light"
                       onClick={() => {
-                        Router.push("https://www.instagram.com/haminepal_/");
+                        Router.push("https://www.facebook.com/HamiNepalNPO/");
                       }}
                     >
                       <IconBrandFacebook size={22} stroke={1} />
@@ -155,7 +155,7 @@ export function LayoutSiteFooter() {
                     <ActionIcon
                       variant="light"
                       onClick={() => {
-                        Router.push("https://www.facebook.com/HamiNepalNPO/");
+                        Router.push("https://www.instagram.com/haminepal_/");
                       }}
                     >
                       <IconBrandInstagram size={22} stroke={1} />
