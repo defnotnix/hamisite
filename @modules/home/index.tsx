@@ -58,7 +58,7 @@ export function ModuleHome() {
           w={{
             lg: "100vw",
           }}
-          h={{ base: 160, lg: "auto" }}
+          h={{ base: 160, sm:"auto", md: "auto", lg: "auto" }}
         />
       </AnimateDiv.Row>
 
