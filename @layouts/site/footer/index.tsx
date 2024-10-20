@@ -100,7 +100,7 @@ export function LayoutSiteFooter() {
                   </Text>
 
                   <Text size="sm" ta={{ base: "center", lg: "left" }}>
-                    +977 01 4331231 , 9841312312
+                    +977 9802260017
                   </Text>
 
                   <Text size="sm" ta={{ base: "center", lg: "left" }}>
